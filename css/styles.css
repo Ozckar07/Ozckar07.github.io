@@ -151,27 +151,32 @@ footer {
 /* //////////////////// ESTILOS CHECKBOX IDIOMA /////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 .languages {
-    background-color: red;
-    z-index: 10;
-    display: inline-block;
+    display: grid;
+    font-size: 1.7em;
     position: fixed;
-    top: 1.5em;
+    top: 9%;
     left: 85%;
+    width: 150px;
+    height: 30px;
+    justify-content: center;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .en {
-    color: #ffffff;
+    color: #2fa5ff;
+    margin-right: 5px;
 }
 
 .es {
     color: #ffffff;
-
+    margin-left: 10px;
 }
 
 .check {
     position: relative;
     width: 0.1%;
 }
+
 
 .check::before {
     content: '';
@@ -187,7 +192,7 @@ footer {
     position: absolute;
     width: 25px;
     height: 25px;
-    background: #fff;
+    background: #ffffff;
     border-radius: 25px;
     border: 2px solid #00a1ff;
     box-sizing: border-box;
@@ -196,14 +201,14 @@ footer {
     background-color: #47B5FF;
 }
 
+.check:checked::before {
+    background: #078cc1;
+}
 .check:checked::after {
     left: 25px;
-    border-color: #00a1ff;
+    border-color: #ffffff;
 }
 
-.check:checked::before {
-    background: #DFF6FF;
-}
 
 /* //////////////////////////////////////////////////////////////////// */
 /* /////////////////////// HOME SECTION /////////////////////////////// */
@@ -511,6 +516,7 @@ span {
 #skills {
     display: flex;
 }
+
 .skills-title {
     position: absolute;
     font-size: 4em;
@@ -521,14 +527,15 @@ span {
     align-items: center;
 }
 
-.skills-content{
+.skills-content {
     display: flex;
     width: 100%;
     justify-content: center;
     padding-top: 5%;
 }
-.skills-content ul{
-    background-color: red;
+
+.skills-content ul {
+    /* background-color: red; */
 }
 
 /*/////////////////// SECTION SKILLS LOGOS ////////////////*/
@@ -570,6 +577,7 @@ span {
     border-radius: 25px;
     margin: 5px;
 }
+
 /* ///////////////////// LOGO SKILL ////////////////////////// */
 .skills-content ul li img {
     width: 60px;
@@ -590,6 +598,7 @@ p {
     /* display: block; */
     display: none;
 }
+
 .skills-content ul li div p {
     text-align: justify;
     margin: 15px;
@@ -667,6 +676,7 @@ p {
     display: block;
     position: absolute;
 }
+
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////// CONTACT SECTION //////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
