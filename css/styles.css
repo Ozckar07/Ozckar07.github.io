@@ -65,9 +65,9 @@ footer {
     text-align: center;
 }
 
-/* /////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////// NAV BAR /////////////////////////////////////////// */
-/* /////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////// NAV BAR /////////////////////////////////////////// */
+/* ///////////////////////////////////////////////////////////////////////////////////// */
 .side-nav {
     display: flex;
     position: fixed;
@@ -80,7 +80,6 @@ footer {
     cursor: pointer;
     z-index: 100;
     transition: all 1.5s ease;
-
 }
 
 /* evento que acciona al pasar el cursos por el menu */
@@ -90,7 +89,6 @@ footer {
     font-size: 1.5em;
     border-radius: 0 350px 350px 0;
 }
-
 
 .side-nav ul {
     display: flex;
@@ -117,16 +115,13 @@ footer {
     justify-content: left;
     color: #ffffff;
     display: inline-block;
-
 }
 
 .side-nav:hover img {
     justify-content: left;
     width: 22%;
     height: auto;
-
 }
-
 
 /* /////////////////////////////////////////////////////////////////////////////// */
 
@@ -154,7 +149,7 @@ footer {
     display: grid;
     font-size: 1.7em;
     position: fixed;
-    top: 9%;
+    top: 7%;
     left: 85%;
     width: 150px;
     height: 30px;
@@ -176,7 +171,6 @@ footer {
     position: relative;
     width: 0.1%;
 }
-
 
 .check::before {
     content: '';
@@ -204,11 +198,11 @@ footer {
 .check:checked::before {
     background: #078cc1;
 }
+
 .check:checked::after {
     left: 25px;
     border-color: #ffffff;
 }
-
 
 /* //////////////////////////////////////////////////////////////////// */
 /* /////////////////////// HOME SECTION /////////////////////////////// */
@@ -315,7 +309,6 @@ footer {
     color: #ffffff;
     display: inline-block;
     text-shadow: 20px 10px 15px #a300d9;
-    z-index: 5;
     position: absolute;
     top: 85%;
     left: 80%;
@@ -341,6 +334,62 @@ footer {
     opacity: 10;
 }
 
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* /////////////////////////////// ABOUT SECTION //////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+#about {
+    display: flex;
+}
+
+.about-title {
+    position: absolute;
+    font-size: 4em;
+    color: #DFF6FF;
+    padding: 2% 0 0 8%;
+    text-shadow: 5px 5px 8px #4acbef;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding-top: 5%;
+}
+
+.name-about {
+    position: absolute;
+    margin-top: 7%;
+    font-size: 4em;
+    color: #DFF6FF;
+    text-shadow: 5px 5px 8px #4acbef;
+    display: none;
+}
+
+.about-content ul {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+}
+.about-content ul li {
+    align-content: space-between;
+    
+ }
+
+ .about-content ul li p{
+    display: none;
+}
+.about-content ul li:hover p{
+    display: block;
+ }
+
+.about-content ul li:hover {
+background-color: #005f19;
+width: auto;
+}
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////// EDUCATION SECCTION ////////////////////////////////// */
@@ -479,35 +528,7 @@ span {
 }
 
 
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* /////////////////////////////// ABOUT SECTION //////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-#about {
-    display: flex;
-}
 
-.about-title {
-    position: absolute;
-    font-size: 4em;
-    color: #DFF6FF;
-    padding: 2% 0 0 8%;
-    text-shadow: 5px 5px 8px #4acbef;
-    justify-content: center;
-    align-items: center;
-}
-
-/* .about-content {} */
-
-#about img {
-    display: inline-block;
-    position: relative;
-    left: 40%;
-    top: 0%;
-    background-color: #00a1ff;
-}
-
-/* #about p {} */
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////////   SKILL SECTION  ///////////////////////////////////////////////////////// */
@@ -535,25 +556,25 @@ span {
 }
 
 .skills-content ul {
-    /* background-color: red; */
+    width: 100%;
 }
 
 /*/////////////////// SECTION SKILLS LOGOS ////////////////*/
 .skills-content ul div {
     display: flex;
-    margin: 20px 0 0 0;
+    margin: 15px 0 0 0;
 }
 
 /* /////////////////// TEXT SECTIOM SKILLS //////////////////*/
 .skills-content ul div h2 {
     color: #ffffff13;
-    font-size: 6em;
+    font-size: 5em;
     text-shadow: 0px 0px 50px rgb(106, 176, 255);
     transition: all 0.3s;
 }
 
 .skills-content ul div:hover h2 {
-    font-size: 5em;
+    font-size: 6em;
     color: #ffffff25;
     text-shadow: 0 0 40px rgb(0, 157, 255);
 }
@@ -626,7 +647,6 @@ p {
 .skills-content ul li:hover div {
     display: block;
 }
-
 
 /* //////////////// FRONTEND STYLES ///////////////*/
 .frontend-skills {
