@@ -322,10 +322,10 @@ footer {
     left: 45%;
     width: 40%;
     height: auto;
-    background-color: #256D85;
-    opacity: 0.2;
-    border-radius: 20%;
-    box-shadow: 10px 10px 11px #DFF6FF;
+    /* background-color: #256D85;
+    opacity: 0.2; */
+    /* border-radius: 20%;
+    box-shadow: 10px 10px 11px #DFF6FF; */
     /* transform: scale(1) skew(-3deg, 10deg); */
 }
 
@@ -392,17 +392,16 @@ footer {
     transition: transform 1s;
 }
 
-.about-content ul li p {
+.about-content ul div li p {
     display: none;
 }
 
-.about-content ul li:hover {
-    background-color: red;
+.about-content ul div li:hover {
     transform: scale(2.2);
     font-size: 0.5em;
     display: flex;
     box-shadow: 0 0 10px 5px #00a2ff;
-    background-color: #47B5FF;
+    /* background-color: #47B5FF; */
     border-radius: 30px;
 }
 
@@ -511,7 +510,6 @@ span {
 /* ////////////////////////////////////////////////////////////////////////////// */
 #experience {
     display: flex;
-    justify-content: center;
 }
 
 .experience-title {
@@ -524,18 +522,15 @@ span {
     align-items: center;
 }
 
-
 .experience-content {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    margin: 7% auto;
 }
 
-
 .job {
-    background-color: red;
-    display: flex;
     margin: 10px;
-    /* padding: 1em; */
 }
 
 .job h3 {
@@ -554,6 +549,7 @@ span {
 }
 
 .job ul li {
+    /* display: none; */
     background-color: violet;
     color: #ce1854;
 }
