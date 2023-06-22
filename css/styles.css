@@ -427,7 +427,6 @@ footer {
 /* ////////////////////////////////////////////////////////////////////////////// */
 #education {
     display: flex;
-    background-color: white;
 }
 
 .education-title {
@@ -511,6 +510,8 @@ span {
 #experience {
     display: flex;
 }
+
+
 
 .experience-title {
     position: absolute;
@@ -842,3 +843,11 @@ p {
         left: 80% !important;
     }
 } */
+
+
+.img-building {
+    width: 50%;
+    height: 40%;
+    display: flex;
+    margin: 4% auto;
+}
