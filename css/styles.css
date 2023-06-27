@@ -343,82 +343,85 @@ footer {
     position: relative;
 }
 
-/*/////////////////////////////////////////////////////////////////////////////////*/
-/*/////////////////////////////// IMAGENES ////////////////////////////////////////*/
-/*/////////////////////////////////////////////////////////////////////////////////*/
-.windows {
+.about-content ul li p {
     position: absolute;
-    left: 450px;
-    top: 140px;
-
+    display: none;
 }
 
+.about-content ul li:hover p {
+    display: block;
+}
+
+/*///////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////// SVG ABOUT ME //////////////////////////////////////////*/
 .dev-sit {
     position: absolute;
-    left: 1000px;
+    left: 940px;
     top: 560px;
-
-}
-
-.escalera {
-    position: absolute;
-    left: 1205px;
-    top: 255px;
-
 }
 
 .big-happy {
     position: absolute;
-    left: 760px;
+    left: 700px;
     top: 400px;
-
 }
 
 .hi {
     position: absolute;
-    left: 600px;
+    left: 540px;
     top: 615px;
 }
 
 .hollo {
     position: absolute;
-    left: 640px;
+    left: 580px;
     top: 155px;
 }
 
 .look-up {
     position: absolute;
-    left: 1220px;
+    left: 1160px;
     top: 327px;
 }
 
 .run {
     position: absolute;
-    left: 1260px;
+    left: 1200px;
     top: 607px;
 }
 
 .smiled {
     position: absolute;
-    left: 1050px;
+    left: 990px;
     top: 150px;
+}
 
+/*///////////////////////////*/
+.windows {
+    position: absolute;
+    left: 380px;
+    top: 140px;
+}
+
+.escalera {
+    position: absolute;
+    left: 1140px;
+    top: 255px;
 }
 
 .pointer {
     position: absolute;
-    left: 1150px;
+    left: 1085px;
     top: 200px;
-
 }
 
 .section-web {
     position: absolute;
-    left: 1410px;
+    left: 1340px;
     top: 558px;
 }
 
-/*///////////////////////////////////////////////////////////////////////*/
+/*////////////////////////////////////////*/
 .dev-sit:hover {
     background-color: #ff4d00;
 }
@@ -445,16 +448,14 @@ footer {
 
 .big-happy:hover {
     background-color: #f6ff00;
-    
+
 }
 
 .hollo:hover {
     background-color: #efefef;
 }
 
-/*///////////////////////////////////////////////////////////////////////*/
-/*///////////////////////////////////////////////////////////////////////*/
-
+/*///////////////////////////////// TITLE ABOUT ME //////////////////////////////////////*/
 .about-title {
     position: absolute;
     font-size: 4em;
@@ -465,6 +466,7 @@ footer {
     align-items: center;
 }
 
+/*//////////////////////////////NAME ABOUT ME/////////////////////////////////////////*/
 .name-about {
     text-align: center;
     color: #ffffff13;
@@ -472,9 +474,10 @@ footer {
     text-shadow: 0px 0px 50px rgb(106, 176, 255);
     position: absolute;
     top: 750px;
-    left: 605px;
+    left: 545px;
     transition: all 0.3s;
 }
+
 .last-about {
     text-align: center;
     color: #ffffff13;
@@ -482,7 +485,7 @@ footer {
     text-shadow: 0px 0px 50px rgb(106, 176, 255);
     position: absolute;
     top: 750px;
-    left: 1250px;
+    left: 1200px;
     transition: all 0.3s;
 }
 
@@ -498,73 +501,7 @@ footer {
     text-shadow: 0 0 40px rgb(0, 157, 255);
 }
 
-
-
-
-
-
-
-.about-content {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
-
-
-
-
-
-
-.about-content ul {
-    margin-top: 10%;
-}
-
-.about-content ul div {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    grid-template-rows: repeat(1, minmax(0, 1fr));
-}
-
-.about-content ul div li {
-    list-style: none;
-    text-align: center;
-    justify-content: center;
-    margin: 20px;
-    width: 400px;
-    height: 100px;
-    transition: transform 1s;
-}
-
-.about-content ul div li p {
-    display: none;
-}
-
-.about-content ul div li:hover {
-    transform: scale(2.2);
-    font-size: 0.5em;
-    display: flex;
-    box-shadow: 0 0 10px 5px #00a2ff;
-    /* background-color: #47B5FF; */
-    border-radius: 30px;
-}
-
-.about-content ul li:nth-child(1) {
-    transform-origin: top left;
-}
-
-.about-content ul li:nth-child(2) {
-    transform-origin: top center;
-}
-
-.about-content ul li:nth-child(3) {
-    transform-origin: top right;
-}
-
-.about-content ul li:hover p {
-    display: block;
-}
-
+/*////////////////////////////////////////////////////////////////////////////////////*/
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* //////////////////////// EDUCATION SECCTION ////////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
