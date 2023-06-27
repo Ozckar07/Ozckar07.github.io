@@ -340,7 +340,120 @@ footer {
 /* ////////////////////////////////////////////////////////////////////////////// */
 #about {
     display: flex;
+    position: relative;
 }
+
+/*/////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////// IMAGENES ////////////////////////////////////////*/
+/*/////////////////////////////////////////////////////////////////////////////////*/
+.windows {
+    position: absolute;
+    left: 450px;
+    top: 140px;
+
+}
+
+.dev-sit {
+    position: absolute;
+    left: 1000px;
+    top: 560px;
+
+}
+
+.escalera {
+    position: absolute;
+    left: 1205px;
+    top: 255px;
+
+}
+
+.big-happy {
+    position: absolute;
+    left: 760px;
+    top: 400px;
+
+}
+
+.hi {
+    position: absolute;
+    left: 600px;
+    top: 615px;
+}
+
+.hollo {
+    position: absolute;
+    left: 640px;
+    top: 155px;
+}
+
+.look-up {
+    position: absolute;
+    left: 1220px;
+    top: 327px;
+}
+
+.run {
+    position: absolute;
+    left: 1260px;
+    top: 607px;
+}
+
+.smiled {
+    position: absolute;
+    left: 1050px;
+    top: 150px;
+
+}
+
+.pointer {
+    position: absolute;
+    left: 1150px;
+    top: 200px;
+
+}
+
+.section-web {
+    position: absolute;
+    left: 1410px;
+    top: 558px;
+}
+
+/*///////////////////////////////////////////////////////////////////////*/
+.dev-sit:hover {
+    background-color: #ff4d00;
+}
+
+.smiled:hover {
+    background-color: #00a1ff;
+
+}
+
+.look-up:hover {
+    background-color: #003757;
+
+}
+
+.hi:hover {
+    background-color: #0c0227;
+
+}
+
+.run:hover {
+    background-color: #1aea9a;
+
+}
+
+.big-happy:hover {
+    background-color: #f6ff00;
+    
+}
+
+.hollo:hover {
+    background-color: #efefef;
+}
+
+/*///////////////////////////////////////////////////////////////////////*/
+/*///////////////////////////////////////////////////////////////////////*/
 
 .about-title {
     position: absolute;
@@ -352,17 +465,24 @@ footer {
     align-items: center;
 }
 
-.about-content {
-    display: flex;
-    width: 100%;
-    justify-content: center;
-}
-
 .name-about {
     text-align: center;
     color: #ffffff13;
     font-size: 5em;
     text-shadow: 0px 0px 50px rgb(106, 176, 255);
+    position: absolute;
+    top: 750px;
+    left: 605px;
+    transition: all 0.3s;
+}
+.last-about {
+    text-align: center;
+    color: #ffffff13;
+    font-size: 5em;
+    text-shadow: 0px 0px 50px rgb(106, 176, 255);
+    position: absolute;
+    top: 750px;
+    left: 1250px;
     transition: all 0.3s;
 }
 
@@ -371,6 +491,30 @@ footer {
     color: #ffffff25;
     text-shadow: 0 0 40px rgb(0, 157, 255);
 }
+
+.last-about:hover {
+    font-size: 6em;
+    color: #ffffff25;
+    text-shadow: 0 0 40px rgb(0, 157, 255);
+}
+
+
+
+
+
+
+
+.about-content {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+
+
+
+
+
 
 .about-content ul {
     margin-top: 10%;
