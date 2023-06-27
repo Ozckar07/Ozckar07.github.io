@@ -337,10 +337,13 @@ footer {
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////// ABOUT SECTION //////////////////////////////// */
 /* ////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
 #about {
     display: flex;
     position: relative;
+}
+
+.about-content {
+    background-color: red;
 }
 
 .about-content ul li p {
@@ -353,63 +356,145 @@ footer {
 
 /*/////////////////////////////// TEXT ABOUT ME /////////////////////////////////////////*/
 .bey {
-    background-color: #005f19;
+    display: block;
     position: absolute;
+    z-index: 50;
+    width: 400px;
+    font-size: 2em;
+
+    padding: 0 0 0 30px;
+    margin: 30px 0 0 60px;
+    background-color: #00a2ff;
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 0 10px 10px bisque;
 }
 
-.hobbies {}
+.hobbies {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 1000px;
+    z-index: 50;
+    color: white;
 
-.goals {}
+    padding: 0 0 0 30px;
+    margin: -425px 0 0 80px;
+    background-color: #00a2ff;
+    border-radius: 40px 40px 40px 0;
+    box-shadow: 0 10px 10px bisque;
+}
 
-.from {}
+.goals {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 500px;
+    z-index: 50;
 
-.more {}
+    padding: 0 0 0 30px;
+    margin: -20px 0 0 110px;
+    background-color: #00a2ff;
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 0 10px 10px bisque;
+}
 
-.iam {}
+.from {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 760px;
+    z-index: 50;
 
-.otro {}
+    padding: 0 0 0 30px;
+    margin: 95px 0 0 80px;
+    background-color: #00a2ff;
+    border-radius: 0 30px 30px 30px;
+    box-shadow: 0 10px 10px bisque;
+}
+
+.more {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 800px;
+    z-index: 50;
+
+    padding: 0 0 0 30px;
+    margin: -170px 0 0 90px;
+    background-color: #00a2ff;
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 0 10px 10px bisque;
+}
+
+.iam {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 700px;
+    z-index: 50;
+
+    padding: 0 0 0 30px;
+    margin: -200px 0 0 -670px;
+    background-color: #00a2ff;
+    border-radius: 30px 30px 0 30px;
+    box-shadow: 0 10px 10px bisque;
+}
+
+.otro {
+    display: block;
+    position: absolute;
+    font-size: 2em;
+    width: 600px;
+    z-index: 50;
+
+    padding: 0 0 0 30px;
+    margin: 30px 0 0 60px;
+    background-color: #00a2ff;
+    border-radius: 30px 30px 30px 0;
+    box-shadow: 0 10px 10px bisque;
+}
 
 /*/////////////////////////////// SVG ABOUT ME //////////////////////////////////////////*/
 .dev-sit {
     position: absolute;
-    left: 940px;
-    top: 560px;
+    left: 900px;
+    top: 515px;
 }
 
 .big-happy {
     position: absolute;
-    left: 700px;
-    top: 400px;
+    left: 650px;
+    top: 365px;
 }
 
 .hi {
     position: absolute;
     left: 540px;
-    top: 615px;
+    top: 570px;
 }
 
 .hollo {
     position: absolute;
-    left: 580px;
-    top: 155px;
+    left: 600px;
+    top: 125px;
 }
 
 .look-up {
     position: absolute;
-    left: 1160px;
-    top: 327px;
+    left: 1100px;
+    top: 293px;
 }
 
 .run {
     position: absolute;
-    left: 1200px;
-    top: 607px;
+    left: 1150px;
+    top: 565px;
 }
 
 .smiled {
     position: absolute;
-    left: 990px;
-    top: 150px;
+    left: 945px;
+    top: 125px;
 }
 
 /*///////////////////////////*/
@@ -439,36 +524,28 @@ footer {
 
 /*////////////////////////////////////////*/
 .dev-sit:hover {
-    background-color: #ff4d00;
 }
 
 .smiled:hover {
-    background-color: #00a1ff;
 
 }
 
 .look-up:hover {
-    background-color: #003757;
 
 }
 
 .hi:hover {
-    background-color: #0c0227;
 
 }
 
 .run:hover {
-    background-color: #1aea9a;
-
 }
 
 .big-happy:hover {
-    background-color: #f6ff00;
 
 }
 
 .hollo:hover {
-    background-color: #efefef;
 }
 
 /*///////////////////////////////// TITLE ABOUT ME //////////////////////////////////////*/
