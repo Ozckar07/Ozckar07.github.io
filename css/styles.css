@@ -344,7 +344,6 @@ footer {
 }
 
 .about-content ul li p {
-    position: absolute;
     display: none;
 }
 
@@ -352,7 +351,24 @@ footer {
     display: block;
 }
 
-/*///////////////////////////////////////////////////////////////////////////////////////*/
+/*/////////////////////////////// TEXT ABOUT ME /////////////////////////////////////////*/
+.bey {
+    background-color: #005f19;
+    position: absolute;
+}
+
+.hobbies {}
+
+.goals {}
+
+.from {}
+
+.more {}
+
+.iam {}
+
+.otro {}
+
 /*/////////////////////////////// SVG ABOUT ME //////////////////////////////////////////*/
 .dev-sit {
     position: absolute;
