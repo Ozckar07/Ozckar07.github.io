@@ -17,7 +17,7 @@ body {
     flex-direction: column;
     overflow: hidden;
     /* touch-action: manipulation; */
-    background-color: #06283D;
+    background-color: #0A2472;
 }
 
 /* MAIN STYLES */
@@ -74,7 +74,7 @@ footer {
     width: 80px;
     height: 100%;
     align-items: center;
-    background-color: #256d859a;
+    background-color: #7209B7;
     overflow: hidden;
     box-shadow: 0px 2px 10px #ffffff66;
     cursor: pointer;
@@ -110,7 +110,6 @@ footer {
     transition: all 0.2s;
 }
 
-/* style .side-nav:hover contet */
 .side-nav:hover ul li a {
     justify-content: left;
     color: #ffffff;
@@ -124,23 +123,10 @@ footer {
 }
 
 /* /////////////////////////////////////////////////////////////////////////////// */
-
 .side-nav img {
     width: 100%;
     height: auto;
 }
-
-/* @media screen and (min-width: 600px) {
-    .side-nav img {
-        width: 32px;
-        height: 32px;
-    }
-}
-@media screen and (min-width: 600px) {
-    .side-nav {
-        width: 80px;
-    }
-} */
 
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////// ESTILOS CHECKBOX IDIOMA /////////////////////// */
@@ -208,97 +194,61 @@ footer {
 /* /////////////////////// HOME SECTION /////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
+#home {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+/* ////////////////////////////// PRINCIPAL IMAGEN ///////////////////////////////////////// */
+#home img {
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    width: 40%;
+    height: auto;
+    background-color: #256D85;
+    opacity: 0.2; 
+    border-radius: 20%;
+    box-shadow: 10px 10px 11px #DFF6FF;
+    transform: scale(1) skew(0deg, 0deg);
+}
+
+#home img:hover {
+    background: transparent;
+    opacity: 10;
+}
+
+/* ////////////////////////////// slogan home ////////////////////////////////////// */
 .slogan {
-    font-size: 2em;
+    font-size: 2.5em;
     z-index: 5;
     position: absolute;
-    top: 20%;
-    left: 9%;
+    margin-left: 10%;
 }
 
 .growing {
-    color: green;
-    animation: greenTransition 0.5s infinite alternate;
+    color: #3A0CA3;
+    text-shadow: 5px 3px 10px #4361EE;
 }
 
-@keyframes greenTransition {
-    0% {
-        background: linear-gradient(to left, #ffffff, #005f19);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    25% {
-        background: linear-gradient(to left, #c8e3cf, #12732c);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    50% {
-        background: linear-gradient(to left, #8cc29a, #25823e);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    75% {
-        background: linear-gradient(to left, #348249, #76b687);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    100% {
-        background: linear-gradient(to left, #348249, #d7e4db);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-}
 
 .learning {
-    color: white;
+    color: #7209B7;
+    text-shadow: 5px 3px 10px #4361EE;
 }
 
 
-.developing {
-    color: #03bcff;
+.coding {
+    color: #f72585;
+    text-shadow: 5px 3px 10px #4361EE;
 }
 
-/* ANIMACION DE ESTILO DE .designing */
 .designing {
+    color: #A6E1FA;
+    text-shadow: 5px 3px 10px #4361EE;
 
-    display: inline;
-    animation: gradientTransition 3s infinite alternate;
-}
-
-@keyframes gradientTransition {
-    0% {
-        background: linear-gradient(to left, #ffffff, #ff0073);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    25% {
-        background: linear-gradient(to left, #f8e2f5, #f82a87);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    50% {
-        background: linear-gradient(to left, #f893eb, #fb4a9a);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    75% {
-        background: linear-gradient(to left, #f953e3, #fda8cf);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
-
-    100% {
-        background: linear-gradient(to left, #fe01e9, #ffffff);
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-    }
 }
 
 /* END ANIMACION .designing */
@@ -315,24 +265,7 @@ footer {
     z-index: 1000;
 }
 
-/* ////////////////////////////// PRINCIPAL IMAGEN ///////////////////////////////////////// */
-#home img {
-    position: absolute;
-    top: 10%;
-    left: 45%;
-    width: 40%;
-    height: auto;
-    /* background-color: #256D85;
-    opacity: 0.2; */
-    /* border-radius: 20%;
-    box-shadow: 10px 10px 11px #DFF6FF; */
-    /* transform: scale(1) skew(-3deg, 10deg); */
-}
 
-#home img:hover {
-    background: transparent;
-    opacity: 10;
-}
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////////// ABOUT SECTION //////////////////////////////// */
@@ -373,9 +306,10 @@ footer {
     display: block;
     position: absolute;
     font-size: 2em;
-    width: 1000px;
+    width: 1100px;
     z-index: 50;
     color: white;
+    padding: 20px;
 
     padding: 0 0 0 30px;
     margin: -425px 0 0 80px;
@@ -390,6 +324,7 @@ footer {
     font-size: 2em;
     width: 500px;
     z-index: 50;
+    padding: 20px;
 
     padding: 0 0 0 30px;
     margin: -20px 0 0 110px;
@@ -459,7 +394,41 @@ footer {
     position: absolute;
     left: 900px;
     top: 515px;
+    width: 200px;
+    height: 300px;
+    animation: image-animation 1s infinite;
 }
+
+@keyframes image-animation {
+
+    0%,
+    20% {
+        background-image: url("../img/fulfis/about/dev-sit.svg");
+    }
+
+    25%,
+    45% {
+        background-image: url("../img/fulfis/about/dev-sit-2.svg");
+    }
+
+    50%,
+    70% {
+        background-image: url("../img/fulfis/about/dev-sit-3.svg");
+    }
+
+    75%,
+    95% {
+        background-image: url("../img/fulfis/about/dev-sit-4.svg");
+    }
+}
+
+.content {
+    /* animation: image-animation 1s infinite; */
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+
 
 .big-happy {
     position: absolute;
@@ -523,31 +492,19 @@ footer {
 }
 
 /*////////////////////////////////////////*/
-.dev-sit:hover {
+.dev-sit:hover {}
 
-}
+.smiled:hover {}
 
-.smiled:hover {
+.look-up:hover {}
 
-}
+.hi:hover {}
 
-.look-up:hover {
+.run:hover {}
 
-}
+.big-happy:hover {}
 
-.hi:hover {
-
-}
-
-.run:hover {
-}
-
-.big-happy:hover {
-
-}
-
-.hollo:hover {
-}
+.hollo:hover {}
 
 /*///////////////////////////////// TITLE ABOUT ME //////////////////////////////////////*/
 .about-title {
@@ -988,36 +945,11 @@ p {
 /* /////////////////// STYLES RESPONSIVE MOVIL ///////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
 /* //////////////////////////////////////////////////////////////////// */
-/* Mobile Styles */
-/* @media only screen and (min-device-width : 320px) and (max-device-width : 628px) { */
-/* body { */
-/* define el tamaño de fuente */
-/* font-size: 14px; */
-/* Bloquea el zoom en dispositivos móviles */
-/* zoom: 100% !important; */
-/* Deshabilita la selección de texto en dispositivos móviles
-        Firefox */
-/* -moz-user-select: none; */
-/* Deshabilita la selección de texto en dispositivos móviles 
-        WebKit */
-/* -webkit-user-select: none; */
-/* Deshabilita la selección de texto en dispositivos móviles 
-        IE/Edge */
-/* -ms-user-select: none; */
-/* Deshabilita la selección de texto en dispositivos móviles */
-/* user-select: none; */
-/* } */
-/* 
-    
+@media only screen and (min-device-width : 412) and (max-device-width : 915px) {}
 
-/* .idiomas {
-        z-index: 10;
-        display: block;
-        position: fixed;
-        top: 2%;
-        left: 80% !important;
-    }
-} */
+@media only screen and (min-device-width : 412) and (max-device-width : 915px) {}
+
+@media only screen and (min-device-width : 412) and (max-device-width : 915px) {}
 
 
 .img-building {

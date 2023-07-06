@@ -1,0 +1,79 @@
+/* global styles */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    font-family: orbitron, Arial, Helvetica, sans-serif;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #0A2472;
+    color: white;
+}
+
+
+/* ////////////////////////////////////////////////////////// */
+/* ///////////////////// NAV BAR //////////////////////////// */
+/* ////////////////////////////////////////////////////////// */
+.side-nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    width: max-content;
+    height: 100vh;
+    background-color: #7209B7;
+    overflow: hidden;
+    box-shadow: 0px 20px 20px #ffffff66;
+    cursor: pointer;
+    z-index: 1000;
+    transition: width 2s;
+}
+
+.side-nav ul {
+    list-style: none;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    padding: 30px;
+}
+
+.side-nav ul li {
+    margin: 10px;
+}
+
+.side-nav ul li a {
+    text-decoration: none;
+}
+
+.side-nav ul li a img {
+    padding: 10px;
+    width: 50%;
+    height: auto;
+}
+
+.side-nav ul li a h4 {
+    color: white;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+
+.side-nav:hover {
+    width: 300px;
+}
+
+.side-nav:hover ul li a h4 {
+    opacity: 1;
+    position: absolute;
+    justify-content: right;
+    color: #ffffff;
+    display: inline-block;
+}
+
+.side-nav:hover img {
+    justify-content: left;
+}
