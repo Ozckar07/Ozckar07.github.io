@@ -208,11 +208,72 @@ footer {
     left: 45%;
     width: 40%;
     height: auto;
-    background-color: #256D85;
-    opacity: 0.2; 
-    border-radius: 20%;
-    box-shadow: 10px 10px 11px #DFF6FF;
-    transform: scale(1) skew(0deg, 0deg);
+    filter: drop-shadow(3px 3px 30px rgba(255, 255, 255, 0.9));
+    animation: intro-anim 0.5s 0.5s ease-in-out;
+}
+
+@keyframes intro-anim {
+    
+    0%,
+    10% {
+        /* opacity: 0.0; */
+        filter: drop-shadow(3px 3px 30px rgba(255, 255, 255, 0.4));
+        
+    }
+    
+    11%,
+    20% {
+        /* opacity: 0.3; */
+        filter: drop-shadow(3px 3px 30px rgba(55, 52, 52, 0.5));
+    }
+    
+    21%,
+    30% {
+        /* opacity: 0.6; */
+        filter: drop-shadow(3px 3px 10px rgba(149, 144, 144, 0.4));
+    }
+    
+    31%,
+    40% {
+        /* opacity: 0.9; */
+        filter: drop-shadow(3px 3px 20px rgba(255, 255, 255, 0.6));
+    }
+    
+    41%,
+    50% {
+        /* opacity: 0.6; */
+        filter: drop-shadow(3px 3px 30px rgba(122, 118, 118, 0.4));
+    }
+    
+    51%,
+    60% {
+        /* opacity: 0.3; */
+        filter: drop-shadow(3px 3px 30px rgba(90, 87, 87, 0.7));
+    }
+    
+    61%,
+    70% {
+        /* opacity: 0.0; */
+        filter: drop-shadow(3px 3px 9px rgba(69, 68, 68, 0.4));
+    }
+    
+    71%,
+    80% {
+        /* opacity: 0.4; */
+        filter: drop-shadow(3px 3px 20px rgba(192, 182, 182, 0.4));
+    }
+    
+    81%,
+    90% {
+        filter: drop-shadow(3px 3px 30px rgba(163, 160, 160, 0.4));
+        /* opacity: 0.8; */
+    }
+    
+    91%,
+    100% {
+        /* opacity: 1; */
+        filter: drop-shadow(3px 3px 30px rgba(255, 255, 255, 0.4));
+    }
 }
 
 #home img:hover {
@@ -229,25 +290,25 @@ footer {
 }
 
 .growing {
-    color: #3A0CA3;
-    text-shadow: 5px 3px 10px #4361EE;
+    color: #0E6BA8;
+    text-shadow: 5px 3px 10px #A6E1FA;
 }
 
 
 .learning {
     color: #7209B7;
-    text-shadow: 5px 3px 10px #4361EE;
+    text-shadow: 5px 3px 10px #A6E1FA;
 }
 
 
 .coding {
     color: #f72585;
-    text-shadow: 5px 3px 10px #4361EE;
+    text-shadow: 5px 3px 10px #A6E1FA;
 }
 
 .designing {
     color: #A6E1FA;
-    text-shadow: 5px 3px 10px #4361EE;
+    text-shadow: 5px 3px 10px #A6E1FA;
 
 }
 
@@ -396,39 +457,16 @@ footer {
     top: 515px;
     width: 200px;
     height: 300px;
-    animation: image-animation 1s infinite;
 }
 
-@keyframes image-animation {
+.dev-sit img {}
 
-    0%,
-    20% {
-        background-image: url("../img/fulfis/about/dev-sit.svg");
-    }
-
-    25%,
-    45% {
-        background-image: url("../img/fulfis/about/dev-sit-2.svg");
-    }
-
-    50%,
-    70% {
-        background-image: url("../img/fulfis/about/dev-sit-3.svg");
-    }
-
-    75%,
-    95% {
-        background-image: url("../img/fulfis/about/dev-sit-4.svg");
-    }
-}
 
 .content {
     /* animation: image-animation 1s infinite; */
     background-size: contain;
     background-repeat: no-repeat;
 }
-
-
 
 .big-happy {
     position: absolute;
@@ -491,20 +529,86 @@ footer {
     top: 558px;
 }
 
+
+.left-arm {
+    position: absolute;
+    padding-left: 130px;
+    padding-top: 30px;
+    background: no-repeat;
+    animation: image-animation 2s infinite;
+}
+
+@keyframes image-animation {
+
+    0% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-1.svg");
+        transform: translate(80px, 0);
+    }
+
+    20% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-2.svg");
+        transform: translate(80px, 0);
+    }
+
+    25% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-3.svg");
+        transform: translate(80px, 0);
+    }
+
+    45% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-2.svg");
+        transform: translate(80px, 0);
+    }
+
+    50% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-1.svg");
+        transform: translate(80px, 0);
+    }
+
+    70% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-2.svg");
+        transform: translate(80px, 0);
+    }
+
+    75% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-3.svg");
+        transform: translate(80px, 0);
+    }
+
+    95% {
+        background-image: url("../img/fulfis/about/dev-sit-anim/left-arm/left-arm-2.svg");
+        transform: translate(80px, 0);
+    }
+}
+
 /*////////////////////////////////////////*/
-.dev-sit:hover {}
+.dev-sit img:hover {
+    scale: 1.2;
+}
 
-.smiled:hover {}
+.smiled img:hover {
+    scale: 1.2;
+}
 
-.look-up:hover {}
+.look-up img:hover {
+    scale: 1.2;
+}
 
-.hi:hover {}
+.hi img:hover {
+    scale: 1.2;
+}
 
-.run:hover {}
+.run img:hover {
+    scale: 1.2;
+}
 
-.big-happy:hover {}
+.big-happy img:hover {
+    scale: 1.2;
+}
 
-.hollo:hover {}
+.hollo img:hover {
+    scale: 1.2;
+}
 
 /*///////////////////////////////// TITLE ABOUT ME //////////////////////////////////////*/
 .about-title {
