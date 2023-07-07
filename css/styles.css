@@ -141,6 +141,7 @@ footer {
     height: 30px;
     justify-content: center;
     grid-template-columns: 1fr 1fr 1fr;
+    z-index: 600;
 }
 
 .en {
@@ -832,9 +833,9 @@ span {
 }
 
 /* ///////////////////// TITLE FOR EACH SKILL /////////////////////////*/
-p {
+.skills-content ul li p {
     color: #ccf0ff;
-    font-size: 1.5em;
+    font-size: 2em;
     text-shadow: 1px 5px 8px #03bcff;
 }
 
