@@ -336,11 +336,10 @@ footer {
 #about {
     display: flex;
     position: relative;
+    color: white;
+    text-shadow: 0 -2px 5px black;
 }
 
-.about-content {
-    background-color: red;
-}
 
 .about-content ul li p {
     display: none;
@@ -459,15 +458,6 @@ footer {
     top: 515px;
     width: 200px;
     height: 300px;
-}
-
-.dev-sit img {}
-
-
-.content {
-    /* animation: image-animation 1s infinite; */
-    background-size: contain;
-    background-repeat: no-repeat;
 }
 
 .big-happy {
