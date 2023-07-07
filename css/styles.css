@@ -340,7 +340,6 @@ footer {
     text-shadow: 0 -2px 5px black;
 }
 
-
 .about-content ul li p {
     display: none;
 }
@@ -607,88 +606,6 @@ footer {
     text-shadow: 0 0 40px rgb(0, 157, 255);
 }
 
-/*////////////////////////////////////////////////////////////////////////////////////*/
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* //////////////////////// EDUCATION SECCTION ////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-/* ////////////////////////////////////////////////////////////////////////////// */
-#education {
-    display: flex;
-}
-
-.education-title {
-    position: absolute;
-    font-size: 4em;
-    color: #DFF6FF;
-    padding: 2% 0 0 8%;
-    text-shadow: 5px 5px 8px #4acbef;
-    justify-content: center;
-    align-items: center;
-}
-
-.education-content {
-    width: 100%;
-    height: auto;
-    display: flex;
-    justify-content: center;
-    background-color: #005f19;
-}
-
-.education-content ul {
-    /* display: flex; */
-    /* align-items: center; */
-    justify-content: center;
-    background-color: black;
-    margin: 10px;
-}
-
-.education-content li {
-    list-style: none;
-    display: flex;
-    background-color: rgb(98, 72, 72);
-    margin: 10px;
-    justify-items: center;
-    transition: all 2s;
-}
-
-.education-content li:hover {
-    background-color: rgb(255, 0, 0);
-}
-
-.education-content li:hover span {
-    display: block;
-    opacity: 1;
-}
-
-.education-item h3 {
-    display: inline-block;
-    color: #885581;
-    position: relative;
-    padding-bottom: 2em;
-    /* background-color: yellow; */
-}
-
-.education-item h4 {
-    /* background-color: blue; */
-}
-
-.education-item p {
-    color: #03bcff;
-    /* background-color: fuchsia; */
-}
-
-span {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    color: white;
-    display: none;
-    opacity: 0;
-    transition: all 5s;
-}
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* /////////////////////////// EXPERIENCE SECTION /////////////////////////////// */
@@ -697,8 +614,6 @@ span {
 #experience {
     display: flex;
 }
-
-
 
 .experience-title {
     position: absolute;
@@ -712,34 +627,39 @@ span {
 
 .experience-content {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 2fr);
     grid-template-rows: auto;
-    margin: 7% auto;
+    margin-left: 10%;
+    margin-top: 8%;
+    /* background-color: red; */
 }
 
 .job {
     margin: 10px;
+    font-size: 1.2em;
 }
 
 .job h3 {
-    background-color: yellow;
-    color: #885581;
+    font-size: 1.5em;
+    color: #4CC9F0;
 }
 
-.job p {
-    background-color: blue;
-    color: #03bcff;
-}
-
-.job ul {
-    background-color: green;
-    color: #15a023;
+.job img {
+    width: 450px;
+    height: auto;
+    margin-top: 30px;
 }
 
 .job ul li {
-    /* display: none; */
-    background-color: violet;
-    color: #ce1854;
+    color: #ccf0ff;
+    font-size: 1.1em;
+    text-shadow: 1px 5px 8px #03bcff;
+    opacity: 0;
+    transition: .5s ease opacity;
+}
+
+.job:hover li {
+    opacity: 1;
 }
 
 
@@ -910,6 +830,89 @@ span {
 .infra-skills h2 {
     display: block;
     position: absolute;
+}
+
+
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* //////////////////////// EDUCATION SECCTION ////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+/* ////////////////////////////////////////////////////////////////////////////// */
+#education {
+    display: flex;
+}
+
+.education-title {
+    position: absolute;
+    font-size: 4em;
+    color: #DFF6FF;
+    padding: 2% 0 0 8%;
+    text-shadow: 5px 5px 8px #4acbef;
+    justify-content: center;
+    align-items: center;
+}
+
+.education-content {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    background-color: #005f19;
+}
+
+.education-content ul {
+    /* display: flex; */
+    /* align-items: center; */
+    justify-content: center;
+    background-color: black;
+    margin: 10px;
+}
+
+.education-content li {
+    list-style: none;
+    display: flex;
+    background-color: rgb(98, 72, 72);
+    margin: 10px;
+    justify-items: center;
+    transition: all 2s;
+}
+
+.education-content li:hover {
+    background-color: rgb(255, 0, 0);
+}
+
+.education-content li:hover span {
+    display: block;
+    opacity: 1;
+}
+
+.education-item h3 {
+    display: inline-block;
+    color: #885581;
+    position: relative;
+    padding-bottom: 2em;
+    /* background-color: yellow; */
+}
+
+.education-item h4 {
+    /* background-color: blue; */
+}
+
+.education-item p {
+    color: #03bcff;
+    /* background-color: fuchsia; */
+}
+
+span {
+    /* position: absolute; */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: red;
+    color: white;
+    display: none;
+    opacity: 0;
+    transition: all 5s;
 }
 
 /* ////////////////////////////////////////////////////////////////////////////// */
