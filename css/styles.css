@@ -88,6 +88,7 @@ footer {
     height: 100%;
     font-size: 1.5em;
     border-radius: 0 350px 350px 0;
+    
 }
 
 .side-nav ul {
@@ -863,21 +864,15 @@ footer {
     gap: 10px;
     align-items: center;
     justify-content: center;
-    /* background-color: black; */
     margin: 10px;
 }
 
 .education-content li {
     list-style: none;
     display: flex;
-    /* background-color: rgb(98, 72, 72); */
     margin: 10px;
     justify-items: center;
     transition: all 2s;
-}
-
-.education-content li:hover {
-    /* background-color: rgb(255, 0, 0); */
 }
 
 .education-content li:hover span {
@@ -895,15 +890,6 @@ footer {
     color: #4CC9F0;
     position: relative;
     padding-bottom: 2em;
-    /* background-color: yellow; */
-}
-
-.education-item h4 {
-    /* background-color: blue; */
-}
-
-.education-item p {
-    color: white;
 }
 
 
@@ -959,7 +945,7 @@ footer {
 
 /* QR IMG contact */
 .contact-content ul li img {
-    width: 100px;
+    width: 200px;
     height: auto;
     display: block;
     margin: 0 auto;
@@ -974,13 +960,14 @@ footer {
 .contact-content ul li a p {
     color: #47B5FF;
     text-align: center;
-    width: 300px;
+    width: 250px;
+    font-size: 2em;
     position: relative;
 }
 
 #contact ul li a:hover {
-    font-size: 15px;
     box-shadow: 0 0px 10px 10px #00a2ff;
+    border-radius: 5%;
 }
 
 #contact ul li a:hover img {
