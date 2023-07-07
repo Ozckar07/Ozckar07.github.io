@@ -856,28 +856,28 @@ footer {
     height: auto;
     display: flex;
     justify-content: center;
-    background-color: #005f19;
 }
 
-.education-content ul {
-    /* display: flex; */
-    /* align-items: center; */
+#education div ul {
+    display: grid;
+    gap: 10px;
+    align-items: center;
     justify-content: center;
-    background-color: black;
+    /* background-color: black; */
     margin: 10px;
 }
 
 .education-content li {
     list-style: none;
     display: flex;
-    background-color: rgb(98, 72, 72);
+    /* background-color: rgb(98, 72, 72); */
     margin: 10px;
     justify-items: center;
     transition: all 2s;
 }
 
 .education-content li:hover {
-    background-color: rgb(255, 0, 0);
+    /* background-color: rgb(255, 0, 0); */
 }
 
 .education-content li:hover span {
@@ -885,9 +885,14 @@ footer {
     opacity: 1;
 }
 
+.education-item {
+    margin: 8%;
+    font-size: 1.2em;
+}
+
 .education-item h3 {
     display: inline-block;
-    color: #885581;
+    color: #4CC9F0;
     position: relative;
     padding-bottom: 2em;
     /* background-color: yellow; */
@@ -898,22 +903,10 @@ footer {
 }
 
 .education-item p {
-    color: #03bcff;
-    /* background-color: fuchsia; */
+    color: white;
 }
 
-span {
-    /* position: absolute; */
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: red;
-    color: white;
-    display: none;
-    opacity: 0;
-    transition: all 5s;
-}
+
 
 /* ////////////////////////////////////////////////////////////////////////////// */
 /* ///////////////////////// CONTACT SECTION //////////////////////////////////// */
