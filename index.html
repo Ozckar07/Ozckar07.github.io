@@ -1,524 +1,197 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-
-    <!-- Styles CSS -->
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/styles.css">
-
-
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;900&display=swap" rel="stylesheet">
-
-    <title>CV OSCAR EN</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#0a1020">
+  <meta name="description" content="Portafolio de Oscar Iván Romero García, desarrollador backend PHP y Laravel. APIs REST, arquitectura de software, integraciones, automatización y soluciones empresariales.">
+  <meta name="author" content="Oscar Iván Romero García">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_EC">
+  <meta property="og:title" content="Oscar Romero — Backend Engineer | PHP & Laravel">
+  <meta property="og:description" content="Diseño soluciones backend para procesos reales. Arquitectura, APIs, automatización, integraciones y 18 proyectos y colaboraciones.">
+  <title>Oscar Romero — Backend Engineer | PHP · Laravel · APIs</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="assets/styles.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Oscar Iván Romero García","jobTitle":"Backend Developer","description":"Backend PHP/Laravel, APIs REST e integraciones empresariales","address":{"@type":"PostalAddress","addressLocality":"Quito","addressCountry":"EC"},"email":"mailto:dev.oscar.romero@gmail.com","url":"https://ozckar07.github.io/","sameAs":["https://github.com/ozckar07"],"knowsAbout":["PHP","Laravel","MariaDB","REST API","Eloquent ORM","Software Architecture","Laravel Queues"]}</script>
 </head>
+<body data-theme="dark">
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+  <div class="noise" aria-hidden="true"></div>
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
 
-<body>
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////// SIDE NAV ////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <header>
-        <nav class="side-nav">
-            <ul>
-                <li>
-                    <img src="../img/HOME.png" alt="home">
-                    <a href="#home">HOME</a>
-                </li>
-                <li>
-                    <img src="../img/ABOUT.png" alt="about">
-                    <a href="#about">ABOUT ME</a>
-                </li>
-                <li>
-                    <img src="../img/EXPERIENCE.png" alt="experience">
-                    <a href="#experience">EXPERIENCIE</a>
-                </li>
-                <li>
-                    <img src="../img/SKILLS.png" alt="skills">
-                    <a href="#skills">SKILLS</a>
-                </li>
-                <li>
-                    <img src="../img/EDUCATION.png" alt="education">
-                    <a href="#education">EDUCATION</a>
-                </li>
-                <li>
-                    <img src="../img/CONTACT.png" alt="contact">
-                    <a href="#contact">CONTÁCT</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header class="site-header" id="top">
+    <nav class="nav shell" aria-label="Navegación principal">
+      <a class="logo" href="#inicio" aria-label="Oscar Romero, ir al inicio"><span class="logo-symbol">&lt;<span class="accent">o</span>r<span class="accent">/</span>&gt;</span><span class="logo-caption">OSCAR ROMERO<span> / ENGINEERING</span></span></a>
+      <div class="nav-links" id="navLinks">
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#especialidades">Especialidades</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#trayectoria">Trayectoria</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="nav-actions">
+        <button class="icon-button theme-toggle" type="button" id="themeToggle" aria-label="Cambiar tema" title="Cambiar tema">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.4A8.8 8.8 0 0 1 8.6 3.9 8.9 8.9 0 1 0 20.1 15.4Z"/></svg>
+        </button>
+        <a class="nav-cta" href="mailto:dev.oscar.romero@gmail.com?subject=Conversemos%20sobre%20una%20oportunidad%20backend">Hablemos <span aria-hidden="true">↗</span></a>
+        <button class="icon-button mobile-menu" type="button" id="menuToggle" aria-controls="navLinks" aria-expanded="false" aria-label="Abrir menú"><span></span><span></span><span></span></button>
+      </div>
+    </nav>
+  </header>
 
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////// SWITCH LANGUAGE SECTION ////////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <main>
-        <div class="languages">
-            <h5 class="en">EN</h5>
-            <input type="checkbox" class="check">
-            <h5 class="es">ES</h5>
+  <main id="contenido">
+    <section class="hero shell" id="inicio" aria-labelledby="heroTitle">
+      <div class="hero-aura hero-aura--one" aria-hidden="true"></div><div class="hero-aura hero-aura--two" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="live-dot" aria-hidden="true"></span> PORTAFOLIO PROFESIONAL <span class="eyebrow-sep">/</span> 2026</div>
+        <p class="hero-index" aria-hidden="true">01 / ENGINEERING WITH PURPOSE</p>
+        <h1 id="heroTitle">El backend que <span class="hero-underline">conecta</span><br><span class="hero-highlight">ideas con sistemas</span><br>que funcionan<span class="hero-period">.</span></h1>
+        <p class="hero-description">Soy <strong>Oscar Iván Romero García</strong>, desarrollador backend especializado en <strong>PHP y Laravel</strong>. Transformo operaciones complejas en APIs, integraciones y automatizaciones mantenibles.</p>
+        <div class="hero-buttons">
+          <a class="button button-primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="docs/CV_Oscar_Romero_Backend_2026.pdf" download>Descargar CV <span aria-hidden="true">↓</span></a>
         </div>
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////// HOME SECTION ////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+        <div class="hero-footer"><span><span class="dot-hollow" aria-hidden="true"></span> Quito, Ecuador · Trabajo remoto</span><span class="hero-footer-rule" aria-hidden="true"></span><span>PHP / Laravel / API Engineering</span></div>
+      </div>
+      <div class="hero-visual" aria-label="Retrato profesional de Oscar Romero y elementos gráficos de arquitectura backend">
+        <div class="photo-orbit orbit-one" aria-hidden="true"></div><div class="photo-orbit orbit-two" aria-hidden="true"></div>
+        <div class="hero-photo-wrap">
+          <div class="hero-photo-backdrop" aria-hidden="true"></div>
+          <img class="hero-photo" src="assets/portrait.webp" alt="Retrato profesional de Oscar Romero" width="720" height="1080" fetchpriority="high">
+          <div class="hero-photo-shade" aria-hidden="true"></div>
+          <div class="hero-photo-label">OSCAR <span>ROMERO</span><small>BACKEND ENGINEER</small></div>
+        </div>
+        <div class="floating-panel floating-panel--api" aria-hidden="true"><span class="tiny-caption"><span class="tiny-led"></span> SYSTEM STATUS</span><strong>API / <span>200 OK</span></strong><div class="panel-tracks"><i></i><i></i><i></i></div></div>
+        <div class="floating-panel floating-panel--stack" aria-hidden="true"><span class="tiny-caption">CORE STACK</span><strong>Laravel<span class="panel-cross">✳</span> PHP</strong><small>ARCHITECTURE / REST / SQL</small></div>
+      </div>
+    </section>
 
-        <section id="home">
-            <!-- <h1 class="name">By. Oscar Romero</h1> -->
-            <div class="slogan">
-                <h1 class="growing">"GROWING,</h1>
-                <h1 class="learning">LEARNING,</h1>
-                <h1 class="designing">DESIGNING,</h1>
-                <h1 class="coding">CODING..."</h1>
+    <section class="proof-band" aria-label="Resumen profesional">
+      <div class="shell proof-grid">
+        <div class="proof-item"><strong>03<span>+</span></strong><div>Años de experiencia<br><small>desde sep. 2023</small></div></div>
+        <div class="proof-item"><strong>18</strong><div>Proyectos y<br>colaboraciones</div></div>
+        <div class="proof-item"><strong>PHP<span>/</span></strong><div>Laravel<br><small>especialidad principal</small></div></div>
+        <div class="proof-item proof-item--last"><span class="proof-flower" aria-hidden="true">✳</span><div>Arquitectura · Integraciones<br><small>Automatización · Datos</small></div></div>
+      </div>
+    </section>
+
+    <section class="section section-about shell" id="sobre-mi" aria-labelledby="aboutTitle">
+      <div class="section-meta"><span class="section-num">/ 01</span><span>PERFIL PROFESIONAL</span></div>
+      <div class="about-layout">
+        <div class="about-lead" data-reveal><h2 id="aboutTitle">No solo escribo <em>código.</em><br>Diseño cómo <span>funciona</span> el negocio.</h2></div>
+        <div class="about-details" data-reveal>
+          <p>Mi especialidad está en construir la lógica que sostiene una plataforma: <strong>reglas de negocio, modelos de datos, flujos transaccionales, seguridad e integraciones.</strong></p>
+          <p>He trabajado en productos de laboratorios ambientales, evaluación educativa, salud ocupacional, comercio y servicios. En cada caso, el reto es el mismo: hacer que procesos reales sean más claros, medibles y sostenibles.</p>
+          <div class="about-tags"><span>Clean architecture mindset</span><span>API first</span><span>AI-assisted workflow</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section expertise-section" id="especialidades" aria-labelledby="expertiseTitle">
+      <div class="shell">
+        <div class="section-meta"><span class="section-num">/ 02</span><span>QUÉ HAGO</span></div>
+        <div class="section-heading"><h2 id="expertiseTitle">Ingeniería detrás<br><span>de cada producto.</span></h2><p>Capacidades que se repiten en los proyectos que he desarrollado o mantenido.</p></div>
+        <div class="expertise-grid">
+          <article class="expertise-card" data-reveal><div class="expertise-icon">{ }</div><span class="expertise-index">01</span><h3>Arquitectura de APIs</h3><p>REST, servicios de dominio, Eloquent ORM, autenticación, permisos y contratos claros.</p><span class="expertise-foot">PHP · Laravel · Passport</span></article>
+          <article class="expertise-card" data-reveal><div class="expertise-icon">↔</div><span class="expertise-index">02</span><h3>Integraciones y pagos</h3><p>Conexión con Datafast, PayPhone, Stripe y sistemas empresariales mediante APIs.</p><span class="expertise-foot">HTTP · Webhooks · SQL</span></article>
+          <article class="expertise-card" data-reveal><div class="expertise-icon">↻</div><span class="expertise-index">03</span><h3>Automatización</h3><p>Procesos asíncronos, colas, tareas programadas, reportes y comunicaciones.</p><span class="expertise-foot">Jobs · Queues · Scheduler</span></article>
+          <article class="expertise-card" data-reveal><div class="expertise-icon">∑</div><span class="expertise-index">04</span><h3>Motores de cálculo</h3><p>Fórmulas configurables, puntuaciones, evaluaciones y algoritmos de búsqueda.</p><span class="expertise-foot">Domain logic · Algorithms</span></article>
+          <article class="expertise-card" data-reveal><div class="expertise-icon">▤</div><span class="expertise-index">05</span><h3>Documentos digitales</h3><p>Generación de PDF y Excel, folios, verificaciones QR, firma y trazabilidad.</p><span class="expertise-foot">DomPDF · Excel · QR</span></article>
+          <article class="expertise-card" data-reveal><div class="expertise-icon">⌘</div><span class="expertise-index">06</span><h3>Evolución de sistemas</h3><p>Mantenimiento legacy, depuración, migraciones y soporte a despliegues QA.</p><span class="expertise-foot">GitLab · CI/CD · Laravel legacy</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section spotlight-section" id="caso-destacado" aria-labelledby="spotTitle">
+      <div class="shell">
+        <div class="section-meta"><span class="section-num">/ 03</span><span>CASO DESTACADO</span></div>
+        <div class="spotlight-layout">
+          <div data-reveal>
+            <div class="label-pill"><span></span> SISTEMA EMPRESARIAL / BACKEND</div>
+            <h2 id="spotTitle">Un laboratorio.<br><span>Un flujo conectado.</span></h2>
+            <p class="spotlight-text">En IPSOMARY, el backend conecta el trabajo comercial, la programación de técnicos, el análisis ambiental y la entrega de informes. Un proyecto de evolución continua donde la complejidad se traduce en procesos digitales trazables.</p>
+            <div class="spotlight-features"><span>Motor de fórmulas</span><span>Informes firmados</span><span>Colas y automatización</span><span>Integración financiera</span></div>
+            <button class="text-link" type="button" data-open-project="ipsomary">Ver caso técnico completo <span aria-hidden="true">↗</span></button>
+          </div>
+          <div class="workflow-card" data-reveal aria-label="Diagrama conceptual de etapas del laboratorio">
+            <div class="workflow-header"><span><span class="workflow-led"></span> WORKFLOW / IPSOMARY</span><span>END-TO-END</span></div>
+            <div class="workflow-steps">
+              <div class="workflow-step"><span class="step-num">01</span><span class="step-glyph">▧</span><div><b>Oferta & requisición</b><small>Comercial · Cotización</small></div><span class="step-ok">✓</span></div>
+              <div class="workflow-step"><span class="step-num">02</span><span class="step-glyph">⌖</span><div><b>Agenda & muestreo</b><small>Operación · Campo</small></div><span class="step-ok">✓</span></div>
+              <div class="workflow-step"><span class="step-num">03</span><span class="step-glyph">∑</span><div><b>Ensayos & resultados</b><small>Laboratorio · Fórmulas</small></div><span class="step-ok">✓</span></div>
+              <div class="workflow-step"><span class="step-num">04</span><span class="step-glyph">▤</span><div><b>Informe & firma</b><small>PDF · Firma · Envío</small></div><span class="step-ok">✓</span></div>
             </div>
-            <img class="img-dev" src="img\dev-work.svg" alt="Dev">
-        </section>
+            <div class="workflow-foot"><span>ESQUEMA CONCEPTUAL</span><span class="fake-progress"><i></i></span><span>04 / 04</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ///////////////////////////////////////////////// ABOUT SECTION //////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
+    <section class="section projects-section shell" id="proyectos" aria-labelledby="projectsTitle">
+      <div class="section-meta"><span class="section-num">/ 04</span><span>TRABAJO REAL</span></div>
+      <div class="projects-top"><div><h2 id="projectsTitle">Proyectos que <span>cuentan</span><br>una historia técnica.</h2><p>Explora proyectos, retos y decisiones de ingeniería. Sin capturas de sistemas privados ni enlaces a código confidencial.</p></div><div class="project-total"><strong>18</strong><span>PROYECTOS &<br>COLABORACIONES</span></div></div>
+      <div class="project-toolbar" role="search">
+        <label class="search-wrap" for="projectSearch"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.8"/><path d="m16 16 5.1 5.1"/></svg><input id="projectSearch" type="search" placeholder="Buscar tecnología, sector o proyecto…" autocomplete="off" aria-label="Buscar proyectos"><span class="search-shortcut">/</span></label>
+        <label class="sort-wrap" for="sortSelect"><span>Ordenar</span><select id="sortSelect" aria-label="Ordenar proyectos"><option value="featured">Relevancia</option><option value="az">A — Z</option><option value="za">Z — A</option></select></label>
+      </div>
+      <div class="filter-bar" id="filterBar" role="group" aria-label="Filtrar proyectos por sector"><!-- injected by JS --></div>
+      <div class="result-line"><span id="resultCount" aria-live="polite">18 proyectos</span><button class="reset-filters" id="resetFilters" type="button" hidden>Limpiar filtros ↗</button></div>
+      <div class="project-grid" id="projectGrid" aria-live="polite"><!-- injected by JS --></div>
+      <div class="empty-state" id="emptyState" hidden><span aria-hidden="true">⌁</span><h3>Sin resultados para esa búsqueda</h3><p>Prueba con «Laravel», «pagos», «salud» o un sector distinto.</p><button type="button" class="button button-secondary" id="clearEmpty">Mostrar todos</button></div>
+      <div class="load-more-wrap"><button class="button button-secondary load-more" id="loadMore" type="button">Ver los 18 proyectos <span aria-hidden="true">↓</span></button></div>
+    </section>
 
-        <section id="about">
-            <h2 class="about-title">ABOUT ME</h2>
+    <section class="section tech-section" id="stack" aria-labelledby="stackTitle">
+      <div class="shell tech-grid">
+        <div data-reveal><div class="section-meta"><span class="section-num">/ 05</span><span>MI CAJA DE HERRAMIENTAS</span></div><h2 id="stackTitle">Backend-first.<br><span>AI-aware.</span></h2><p>Mi fortaleza está en el backend. Uso herramientas de IA como apoyo para explorar soluciones, prototipar interfaces y acelerar tareas, sin sustituir validación, pruebas ni criterio técnico.</p><div class="skill-cloud" aria-label="Tecnologías principales"><span>PHP 8.x</span><span>Laravel</span><span>MariaDB</span><span>MySQL</span><span>REST APIs</span><span>Eloquent ORM</span><span>Passport</span><span>Queues</span><span>GitLab CI/CD</span><span>Stripe</span><span>Datafast</span><span>PayPhone</span><span>PDF / Excel</span><span>JavaScript básico</span></div></div>
+        <div class="terminal-card" data-reveal aria-label="Fragmento conceptual de arquitectura, no código de clientes"><div class="terminal-head"><span class="terminal-dots"><i></i><i></i><i></i></span><span>architecture / concept.php</span><span>⌁</span></div><pre aria-hidden="true"><code><span class="code-muted">// Diseño de dominio, no código de cliente</span>
+<span class="code-accent">final class</span> BusinessWorkflow
+{
+  <span class="code-accent">public function</span> handle(Request $input)
+  {
+    <span class="code-muted">// validar reglas de negocio</span>
+    $data = $this->validator->check($input);
 
-            <div class="about-content">
-                <ul>
-                    <li>
-                        <h3 class="name-about">OSCAR</h3>
-                        <h3 class="last-about">ROMERO</h3>
-                        <img src="img\fulfis\about\web-windows.svg" class="windows" alt="web-windows">
-                        <img src="img\fulfis\about\Escalera.svg" class="escalera" alt="Escalera">
-                        <img src="img\fulfis\about\pointer.svg" class="pointer" alt="pointer">
-                        <img src="img\fulfis\about\section-web.svg" class="section-web" alt="section-web">
-                    </li>
-                    <li class="hollo">
-                        <p class="bey"><strong>Thank you for visiting my CV</strong></p>
-                        <h3>Thanks</h3>
-                        <img src="img\fulfis\about\fulfi-hollo.svg" alt="fulfi-hollo">
-                    </li>
+    <span class="code-muted">// mantener consistencia</span>
+    <span class="code-purple">return</span> DB::transaction(<span class="code-purple">fn</span> () =&gt;
+      $this->service->execute($data)
+    );
+  }
+}</code></pre><div class="terminal-foot"><span>API DESIGN</span><span>BUSINESS LOGIC</span><span>RELIABLE FLOWS</span></div></div>
+      </div>
+    </section>
 
-                    <li class="hi">
-                        <h3>Hobbies</h3>
-                        <p class="hobbies"><strong> * My biggest obsession, electronic music; just like classical music,
-                                it conveys so much through sound and rhythms.
-                                <br>
-                                <br>
-                                * Programming, the ability to create something and overcome every challenge, releases
-                                more endorphins than completing a video game level.
-                                <br>
-                                <br>
-                                * Video games, but not repetitive and monotonous ones, those with a story and a
-                                conclusion; solving obstacles helps with mental training.
-                                <br>
-                                <br>
-                                * Cooking and eating, the creation of flavor through the proper treatment of each
-                                ingredient.</strong></p>
-                        <img src="img\fulfis\about\Fulfi-hi.svg" alt="Fulfi-hi">
-                    </li>
+    <section class="section journey-section shell" id="trayectoria" aria-labelledby="journeyTitle">
+      <div class="section-meta"><span class="section-num">/ 06</span><span>TRAYECTORIA</span></div>
+      <div class="journey-grid"><div><h2 id="journeyTitle">Una trayectoria.<br><span>Muchos problemas resueltos.</span></h2><p>Los proyectos se realizaron dentro de una experiencia laboral principal; sus periodos pueden superponerse.</p></div><div class="timeline">
+        <div class="timeline-item"><span class="timeline-point"></span><small>2023 — ACTUALIDAD</small><h3>Big Project · Desarrollador Backend</h3><p>Construcción, evolución y soporte de productos digitales en PHP/Laravel, APIs e integraciones para distintos sectores.</p></div>
+        <div class="timeline-item"><span class="timeline-point"></span><small>2023</small><h3>Tecnólogo en Desarrollo de Software</h3><p>Instituto Superior Universitario Sucre · Quito, Ecuador.</p></div>
+        <div class="timeline-item"><span class="timeline-point"></span><small>EN EVOLUCIÓN</small><h3>Entrega web asistida por IA</h3><p>Desarrollo backend como especialidad; frontend básico, prototipado desde Figma y uso responsable de herramientas de IA.</p></div>
+      </div></div>
+    </section>
 
-                    <li class="run">
-                        <h3>Goals</h3>
-                        <p class="goals"><strong>
-                                "Be better than bestest, and surpass myself every day..."
-                            </strong></p>
-                        <img src="img\fulfis\about\Fulfi-run-scared.svg" alt="fulfi-run-scared">
-                    </li>
+    <section class="section contact-section" id="contacto" aria-labelledby="contactTitle">
+      <div class="shell contact-box"><div class="contact-glow" aria-hidden="true"></div><div class="section-meta"><span class="section-num">/ 07</span><span>SIGUIENTE CONVERSACIÓN</span></div>
+        <div class="contact-content"><div><span class="contact-overline">¿TIENES UN RETO TÉCNICO?</span><h2 id="contactTitle">Construyamos algo <em>que importe.</em></h2><p>Si buscas experiencia en Laravel, APIs o procesos empresariales, conversemos.</p></div><div class="contact-actions"><a href="mailto:dev.oscar.romero@gmail.com?subject=Oportunidad%20de%20desarrollo%20backend" class="button button-primary button-wide">Enviar un correo <span aria-hidden="true">↗</span></a><button type="button" class="button button-tertiary" id="copyEmail">Copiar dirección <span aria-hidden="true">⧉</span></button></div></div>
+        <div class="contact-bottom"><a href="mailto:dev.oscar.romero@gmail.com">dev.oscar.romero@gmail.com</a><a href="https://github.com/ozckar07" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="docs/CV_Oscar_Romero_Backend_2026.pdf" download>CV en PDF ↓</a></div>
+      </div>
+    </section>
+  </main>
 
-                    <li class="smiled">
-                        <h3>Where I'm from</h3>
-                        <p class="from"><strong>I currently live in the "Face of God" ("Carita de Dios")
-                                <br>
-                                city of Quito, Pichincha, Ecuador.
-                                <br>
-                                (Availability for both in-person and remote work)
-                                <br>
-                                <br>
-                                But I was born in the beautiful coffee lands
-                                <br>
-                                La Tebaida, Quindío, Colombia.
-                                <br>
-                                (Availability for 100% remote work) </strong></p>
-                        <img src="img\fulfis\about\fulfi-smiled.svg" alt="fulfi-smiled">
-                    </li>
+  <footer class="footer shell"><span class="footer-brand">&lt;or/&gt;</span><span>© <span id="currentYear">2026</span> Oscar Romero · Quito, Ecuador</span><span>Built with HTML, CSS & JavaScript · Hosted on GitHub Pages</span><a href="#top" aria-label="Volver al inicio">↑ Subir</a></footer>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-                    <li class="big-happy">
-                        <h3>More</h3>
-                        <p class="more"><strong>"I worked in the bar and restaurant service for 8 years.
-                                <br>
-                                As a cook, waiter, bartender, and manager in various establishments,
-                                <br>
-                                An experience that has helped me understand and handle real-life processes with ease."
-                            </strong></p>
-                        <img src="img\fulfis\about\fulfi-big-happy.svg" alt="fulfi-big-happy">
-                    </li>
+  <div class="modal" id="projectModal" hidden aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+    <section class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="modalTitle" tabindex="-1">
+      <div class="modal-head"><span class="modal-overline">PROJECT / TECHNICAL CASE</span><button class="modal-close" id="modalClose" type="button" aria-label="Cerrar detalle del proyecto">✕</button></div>
+      <div class="modal-scroll" id="modalContent"></div>
+    </section>
+  </div>
 
-                    <li class="dev-sit">
-                        <h3>Hello...!</h3>
-                        <p class="iam"><strong>Hello, my name is Oscar Romero.
-                                <br>Nice to meet you...!
-                                <br>
-                                <br>
-                                Thank's for visiting and reading the content of my web CV!
-                            </strong>
-                        </p>
-                        <img class="left-arm" src="" alt="">
-                        <img src="img\fulfis\about\dev-sit-anim\dev.svg" alt="dev">
-                    </li>
-
-                    <li class="look-up">
-                        <h3>Great Talent!</h3>
-                        <p class="otro"><strong>
-                                "Include me in your team, and I will contribute 200% of myself."
-                            </strong></p>
-                        <img src="img\fulfis\about\Fulfi-look-up.svg" alt="look-up">
-                    </li>
-                </ul>
-            </div>
-
-        </section>
-
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////// EXPERIENCE SECTION //////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section id="experience">
-            <h2 class="experience-title">EXPERIENCE</h2>
-            <div class="experience-content">
-                <div class="job">
-                    <h3>Edgar Nieto - IT <br>
-                        Web Developer
-                    </h3>
-                    <p>2022/03/05 - 2023/05/22</p>
-                    <img class="team-dev" src="../img/team-dev.svg" alt="team-dev">
-                    <ul>
-                        <li>Using HTML, CSS, and JavaScript to create interactive and appealing user interfaces.
-                        </li>
-                        <li>Developing business logic using PHP and utilizing the Laravel framework to build robust and
-                            secure web applications.</li>
-                        <li>Working with relational databases like MySQL and PostgreSQL to store and manipulate data
-                            effectively.</li>
-                        <li>Designing database schemas, creating SQL queries, and managing data persistence.</li>
-                        <li>Implementing Docker to package applications and their dependencies in isolated and portable
-                            environments.</li>
-                        <li>Working in a team and participating in multiple projects.</li>
-                        <li>Documenting processes using UML.</li>
-                    </ul>
-                </div>
-
-
-                <div class="job">
-                    <h3>SENESCYT
-                        <br>
-                        Technical Support
-                    </h3>
-                    <p>2022/11/28 - 2023/02/02</p>
-                    <img class="soport" src="../img/soport.svg" alt="soport">
-                    <ul>
-                        <li>Attending to and resolving technical incidents reported by users.</li>
-                        <li>Diagnosing and solving problems related to hardware, software, networks, and operating
-                            systems.</li>
-                        <li>Configuring and maintaining computer equipment, including software installation and updates.
-                        </li>
-                        <li>Providing basic training to users on hardware and software usage.</li>
-                        <li>Performing data backups and restoration.</li>
-                        <li>Tracking and managing IT assets, including hardware and software inventory.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////// SKILLS SECTION //////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section id="skills">
-            <h2 class="skills-title">SKILLS</h2>
-            <div class="skills-content">
-                <ul>
-                    <div class="frontend-skills">
-                        <h2>FRONTEND</h2>
-                        <li>
-                            <p>HTML</p>
-                            <img src="img/skills/html.png" alt="html">
-                            <div>
-                                <p>Creation of interactive forms for data capture.</p>
-                                <p>Use of tags and attributes to organize and present content.</p>
-                                <p>Integration of multimedia elements.</p>
-                                <p>Web page semantics to improve accessibility and SEO.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>CSS</p>
-                            <img src="img/skills/css.png" alt="css">
-                            <div>
-                                <p>Styling and design of web pages to enhance visual appearance.</p>
-                                <p>Use of CSS selectors and rules to apply styles to specific elements.</p>
-                                <p>Creation of responsive designs to adapt to different screen sizes.</p>
-                                <p>Animations and visual effects using CSS transitions and transformations.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>JavaScript</p>
-                            <img src="img/skills/js.png" alt="JavaScript">
-                            <div>
-                                <p>DOM manipulation to interact with elements on the web page.</p>
-                                <p>Implementation of client-side interactions and events.</p>
-                                <p>Use of libraries and frameworks like jQuery or React.js for frontend development.</p>
-                                <p>Consumption of APIs and manipulation of data in JSON format.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Bootstrap</p>
-                            <img src="img/skills/bootstrap.png" alt="">
-                            <div>
-                                <p>Use of predefined components to expedite web interface development.</p>
-                                <p>Responsive design adaptable to different devices and screen sizes.</p>
-                                <p>Utilization of grids (grid system) to structure and organize content.</p>
-                                <p>Customization and extension of styles using CSS variables and classes.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Photoshop</p>
-                            <img src="img/skills/photoshop.png" alt="">
-                            <div>
-                                <p>Editing and optimization of images.</p>
-                                <p>Composition of images using layers.</p>
-                                <p>Creation and modification of logos.</p>
-                                <p>Image scaling and web color optimization.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Figma</p>
-                            <img src="../img/skills/figma.svg" alt="">
-                            <div>
-                                <p>Creation and editing of illustrations and animations in .SVG format.</p>
-                                <p>Interface design and prototyping of web interface mockups, color schemes, logos, etc.
-                                </p>
-                                <p>Creation of graphics and visual elements such as buttons, icons, banners, headers,
-                                    and others that align with the company's brand.</p>
-                            </div>
-                        </li>
-                    </div>
-
-                    <div class="backend-skills">
-                        <h2>BACKEND</h2>
-                        <li>
-                            <p>PHP</p>
-                            <img src="img/skills/PHP.png" alt="php">
-                            <div>
-                                <p>Development of web applications with dynamic content generation.</p>
-                                <p>Interaction with databases and their information.</p>
-                                <p>Creation of APIs for communicationbetween systems.</p>
-                                <p>Integration with popular frameworks like Laravel.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Laravel 9</p>
-                            <img src="img/skills/laravel.png" alt="">
-                            <div>
-                                <p>Agile and efficient development of web applications based on the MVC pattern.</p>
-                                <p>Handling of routes, controllers, and views for creating interactive web interfaces.
-                                </p>
-                                <p>Implementation of authentication and authorization to protect access to resources.
-                                </p>
-                                <p>Use of Eloquent ORM for elegant and efficient database handling.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Node.js</p>
-                            <img src="img/skills/Node.js.png" alt="">
-                            <div>
-                                <p>Creation of fast and scalable web servers using server-side JavaScript.</p>
-                                <p>Development of RESTful APIs and microservices.</p>
-                                <p>Use of package managers like npm or yarn for dependency management.</p>
-                                <p>Implementation of real-time applications with WebSockets.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>MySQL</p>
-                            <img src="img/skills/sql.png" alt="">
-                            <div>
-                                <p>Management of databases and relationships between tables.</p>
-                                <p>Creation and execution of SQL queries for data manipulation and retrieval.</p>
-                                <p>Administration of users, permissions, and roles in the database.</p>
-                                <p>Optimization and performance tuning of queries and database structures.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>Docker</p>
-                            <img src="img/skills/Docker.png" alt="">
-                            <div>
-                                <p>Creation, configuration, and deployment of containers for packaging applications and
-                                    their dependencies in isolated and portable development environments.</p>
-                            </div>
-                        </li>
-
-                    </div>
-
-                    <div class="documentation-skills">
-                        <h2>DOCUMENTATION</h2>
-                        <li>
-                            <p>PowerDesigner</p>
-                            <img src="img/skills/PowerDesigner.png" alt="PowerDesigner">
-                            <div>
-                                <p>Creation of entity-relationship (ER) diagrams and conceptual models.</p>
-                                <p>Automatic generation of database creation scripts.</p>
-                                <p>Clear and detailed documentation of database structure.</p>
-                                <p>Collaboration and sharing of models among development teams.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>StarUML</p>
-                            <img src="img/skills/StarUml.png" alt="StarUML">
-                            <div>
-                                <p>Creation of UML diagrams for software modeling.</p>
-                                <p>Support for various types of diagrams such as class diagrams, sequence diagrams, and
-                                    activity diagrams.</p>
-                                <p>Automatic code generation from diagrams.</p>
-                                <p>Integration with version control for tracking changes in models.</p>
-                            </div>
-                        </li>
-                        <li>
-                            <p>GitHub</p>
-                            <img src="img/skills/git.png" alt="">
-                            <div>
-                                <p>Distributed version control and repository management.</p>
-                                <p>Effective collaboration with development teams.</p>
-                                <p>Issue tracking and bug tracking.</p>
-                            </div>
-                        </li>
-                    </div>
-
-                    <div class="infra-skills">
-                        <h2>SUPPORT</h2>
-                        <li>
-                            <p>Cisco Packet Tracer</p>
-                            <img src="img/skills/CiscoPT.png" alt="Cisco">
-                        </li>
-                    </div>
-                </ul>
-            </div>
-        </section>
-
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- ///////////////////////////////////////////// EDUCATION SECTION //////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-
-        <section id="education">
-            <h2 class="education-title">EDUCATION</h2>
-            <div class="education-content">
-                <div class="education-item">
-                    <h3>Software Development Technologist <br>
-                        Instituto Superior Tecnológico Sucre</h3>
-                    <p>Quito - Ecuador <br>
-                        2020 - 2023</p>
-                    <ul>
-                        <li>Domain knowledge of the principles and basic concepts of programming, including variables,
-                            control structures, data types, functions, and object-oriented programming.</li>
-                        <li>Experience in using programming languages such as Java, PHP, Python, and JavaScript.</li>
-                        <li>Practices in the development of web applications using HTML, CSS, and integrations with the
-                            backend.</li>
-                        <li>Utilization of popular frameworks like React for the frontend and Laravel for the backend.
-                        </li>
-                        <li>Analysis and design of relational databases and practical knowledge in SQL for the creation
-                            and manipulation of relational data.</li>
-                        <li>Knowledge in mobile application development for Android platforms using Dart technology for
-                            the utilization of the cross-platform framework Flutter.</li>
-                        <li>Understanding of project management principles and methodologies such as Scrum, XP, and
-                            Kanban to ensure the timely and efficient delivery of software solutions.</li>
-                        <li>Knowledge in software testing, debugging, and coding best practices to ensure the quality
-                            and maintainability of the developed software.</li>
-                        <li>Understanding of software design and architecture principles, including design patterns,
-                            layered development, and modern architectures such as microservices.</li>
-                        <li>Knowledge of the fundamentals of cybersecurity, data protection best practices, and risk
-                            mitigation techniques in software development.</li>
-                        <li>Ability to analyze and solve problems in a logical and effective manner, applying critical
-                            thinking techniques and problem-solving skills.</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
-
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- /////////////////////////////////////////////////////// CONTACT SECTION //////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-        <section id="contact">
-            <h2 class="contact-title">CONTACT</h2>
-            <div class="contact-content">
-                <ul>
-                    <li>
-                        <a href="https://wa.me/5930978941730">
-                            <div class="text-contact">
-                                <p>Chat me! <br> I'll be delighted to hear your ideas... 🤓</p>
-                            </div>
-                            <img src="img/QR/whatsapp-logo.png" alt="WhatsApp">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="mailto:oscar.romero.7@outlook.com?Subject=Hi%20Oz%20we%20saw%20your%20Web%20CV%20">
-                            <div class="text-contact">
-                                <p>Leave me a message! <br> Schedule an appointment and I'll assist you... 😊</p>
-                            </div>
-                            <img src="img/QR/outlook-logo.png" alt="Outlook">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://github.com/Ozckar07">
-                            <div class="text-contact">
-                                <p>Be careful! <br> It might be a bit messy... 😅</p>
-                            </div>
-                            <img src="img/QR/github-logo.png" alt="GitHub">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://www.linkedin.com/in/oscar-iv%C3%A1n-romero-garc%C3%ADa-023b63106/">
-                            <div class="text-contact">
-                                <p>Connect with me! <br> Add me to your professional network 😁</p>
-                            </div>
-                            <img src="img/QR/linkedin-logo.png" alt="LinkedIn">
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="https://goo.gl/maps/4GRsawsXVcLJ9em39">
-                            <div class="text-contact">
-                                <p>Visit me! <br> I cook deliciously 🤗</p>
-                            </div>
-                            <img src="img/QR/ubicacion-logo.png" alt="Location">
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <!-- //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// -->
-    <footer>
-        <p>Visit my profile on <a href="https://github.com/Ozckar07">GitHub</a> and <a
-                href="https://www.linkedin.com/in/oscar-iv%C3%A1n-romero-garc%C3%ADa-023b63106">LinkedIn</a></p>
-    </footer>
-
-    <script src="js/app.js"></script>
+  <script src="assets/projects.js" defer></script>
+  <script src="assets/app.js" defer></script>
 </body>
-
 </html>
