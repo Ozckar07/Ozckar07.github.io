@@ -8,7 +8,7 @@ Portafolio personal estático (HTML, CSS y JavaScript), diseñado para publicars
 - Traduce navegación, portada, habilidades, recorrido, contacto, filtros, búsquedas, tarjetas de los **18 proyectos** y sus ventanas de detalle.
 - El texto en español permanece en `index.html` y `assets/projects.js`; las traducciones inglesas están en `assets/i18n.js`.
 - El idioma y el tema se almacenan **por separado** en `localStorage` (`oscar-portfolio-lang`, `oscar-portfolio-theme`); si el navegador bloquea el almacenamiento, la web sigue funcionando.
-- En inglés, los enlaces del CV indican **(ES)** porque el PDF incluido está en español; puedes cambiarlo por tu CV inglés cuando dispongas de él.
+- El botón **Descargar CV** y el enlace **CV en PDF** descargan el PDF según el idioma actual: español o inglés. No hace falta recargar y el tema visual se mantiene independiente.
 - Las descripciones de proyectos son redactadas a partir de la experiencia profesional. No hay capturas ni código de clientes privados.
 
 ## Instalación en tu repositorio existente
@@ -36,7 +36,9 @@ git push origin main
 | `assets/i18n.js` | Traducciones inglesas, categorías, roles y etiquetas |
 | `assets/app.js` | Cambio de idioma, filtros, modales, tema y eventos |
 | `assets/portrait.webp` | Fotografía |
-| `docs/CV_Oscar_Romero_Backend_2026.pdf` | CV descargable, en español |
+| `docs/CV_Oscar_Romero_ES.pdf` | CV actualizado en español: archivo original facilitado por Oscar Romero |
+| `docs/CV_Oscar_Romero_EN.pdf` | Traducción al inglés del CV completo con 18 proyectos y fotografía |
+| `docs/CV_Oscar_Romero_Backend_2026.pdf` | Alias español para enlaces antiguos |
 | `.nojekyll` | Mantiene el despliegue estático en GitHub Pages |
 
 ## Para actualizar textos
@@ -47,3 +49,16 @@ git push origin main
 - Mantén los nombres de tecnologías y marcas sin traducir.
 
 El selector ES / EN traduce la interfaz existente **sin usar Google Translate**, sin llamadas externas ni suscripciones.
+
+## Descarga de CV según idioma
+
+Los dos botones de descarga de `index.html` tienen el atributo `data-cv-download`. El archivo
+`assets/app.js` actualiza el `href`, el nombre de descarga y la etiqueta accesible cada vez que cambia ES/EN.
+
+- **ES:** `docs/CV_Oscar_Romero_ES.pdf` → `Oscar_Romero_CV_ES.pdf`
+- **EN:** `docs/CV_Oscar_Romero_EN.pdf` → `Oscar_Romero_CV_EN.pdf`
+
+Los PDFs están almacenados localmente en la carpeta `docs/`; GitHub Pages no necesita backend
+ni APIs de traducción. Para actualizar el contenido basta con reemplazar el PDF correspondiente.
+La versión en inglés se tradujo del PDF español adjunto; revisa la terminología de cargos y fechas
+antes de utilizarla para una candidatura internacional.

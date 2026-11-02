@@ -299,11 +299,27 @@
       el.setAttribute('href', currentLang === 'en' ? original.replace('Conversemos%20sobre%20una%20oportunidad%20backend','Let%27s%20discuss%20a%20backend%20opportunity').replace('Oportunidad%20de%20desarrollo%20backend','Backend%20development%20opportunity') : original);
     }
   }
+  // The PDF is language-specific. Keep every CV link in sync with the ES/EN selector.
+  // Relative paths work both on a user/organization Pages site and under /portfolio/.
+  function updateCVDownloads() {
+    const isEnglish = currentLang === 'en';
+    const filename = isEnglish ? 'Oscar_Romero_CV_EN.pdf' : 'Oscar_Romero_CV_ES.pdf';
+    const file = isEnglish ? 'docs/CV_Oscar_Romero_EN.pdf' : 'docs/CV_Oscar_Romero_ES.pdf';
+    const accessibleText = isEnglish ? 'Download résumé in English (PDF)' : 'Descargar hoja de vida en español (PDF)';
+    document.querySelectorAll('[data-cv-download]').forEach(link => {
+      link.setAttribute('href', file);
+      link.setAttribute('download', filename);
+      link.setAttribute('aria-label', accessibleText);
+      link.setAttribute('title', accessibleText);
+      link.setAttribute('hreflang', currentLang);
+    });
+  }
   function setLanguage(language) {
     currentLang = language === 'en' ? 'en' : 'es';
     document.documentElement.lang = currentLang === 'en' ? 'en' : 'es';
     document.querySelector('meta[property="og:locale"]')?.setAttribute('content', currentLang === 'en' ? 'en_US' : 'es_EC');
     renderStaticTranslations();
+    updateCVDownloads();
     document.querySelector('.lang-switch')?.setAttribute('aria-label', strings('Seleccionar idioma','Select language'));
     document.querySelectorAll('.lang-option').forEach(btn => btn.setAttribute('aria-pressed',String(btn.dataset.lang === currentLang)));
     // The theme and language controls are independent, but their accessible labels follow the selected language.

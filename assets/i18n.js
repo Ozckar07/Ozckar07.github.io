@@ -7,7 +7,7 @@ window.OSCAR_I18N = {
     'El backend que':'Backend engineering that','conecta':'connects','ideas con sistemas':'ideas to systems','que funcionan':'that work',
     'Soy':'I’m','PHP y Laravel':'PHP and Laravel',', desarrollador backend especializado en':', a backend developer specializing in',
     '. Transformo operaciones complejas en APIs, integraciones y automatizaciones mantenibles.':'. I transform complex business operations into maintainable APIs, integrations, and automation.',
-    'Explorar proyectos':'Explore projects','Descargar CV':'Download CV (ES)','Quito, Ecuador · Trabajo remoto':'Quito, Ecuador · Remote work',
+    'Explorar proyectos':'Explore projects','Descargar CV':'Download CV','Quito, Ecuador · Trabajo remoto':'Quito, Ecuador · Remote work',
     'Años de experiencia':'Years of experience','desde sep. 2023':'since Sep 2023', 'Proyectos y':'Projects and','colaboraciones':'collaborations',
     'especialidad principal':'core specialty','Arquitectura · Integraciones':'Architecture · Integrations','Automatización · Datos':'Automation · Data',
     'PERFIL PROFESIONAL':'PROFESSIONAL PROFILE','No solo escribo':'I do more than write','código.':'code.',
@@ -57,7 +57,7 @@ window.OSCAR_I18N = {
     'Construyamos algo':'Let’s build something','que importe.':'that matters.',
     'Si buscas experiencia en Laravel, APIs o procesos empresariales, conversemos.':'If you need experience with Laravel, APIs, or enterprise workflows, let’s talk.',
     'Enviar un correo':'Send an email','Copiar dirección':'Copy email address',
-    'CV en PDF ↓':'CV (Spanish PDF) ↓','Oscar Romero · Quito, Ecuador':'Oscar Romero · Quito, Ecuador',
+    'CV en PDF ↓':'CV in PDF ↓','Oscar Romero · Quito, Ecuador':'Oscar Romero · Quito, Ecuador',
     '↑ Subir':'↑ Back to top','PROJECT / TECHNICAL CASE':'PROJECT / TECHNICAL CASE'
   },
   attributesEn: {
