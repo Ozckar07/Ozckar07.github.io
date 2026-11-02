@@ -2,6 +2,22 @@
 (() => {
   'use strict';
   const projects = Array.isArray(window.OSCAR_PROJECTS) ? window.OSCAR_PROJECTS : [];
+  const i18n = window.OSCAR_I18N || {};
+  let currentLang = 'es';
+  try { currentLang = localStorage.getItem('oscar-portfolio-lang') === 'en' ? 'en' : 'es'; } catch (_) { /* private browsing */ }
+  const strings = (es, en) => currentLang === 'en' ? en : es;
+  const commonEs = {detail:'Ver detalle ↗',projects:'proyectos',project:'proyecto',showing:'mostrando',viewCase:'Ver caso técnico de',challenge:'El desafío',approach:'Enfoque técnico',contributions:'Funcionalidades y aportes',stack:'Stack y herramientas',note:'Caso técnico descriptivo. No se incluyen datos privados, código propietario, capturas inventadas ni enlaces a repositorios de clientes.',copied:'Correo copiado al portapapeles ✓',writeTo:'Escribe a:',openMenu:'Abrir menú',closeMenu:'Cerrar menú',enableDark:'Activar tema oscuro',enableLight:'Activar tema claro'};
+  const translate = (key) => currentLang === 'en' ? (i18n.commonEn?.[key] || key) : (commonEs[key] || key);
+  const translateCategory = (name) => currentLang === 'en' ? (i18n.categoriesEn?.[name] || name) : name;
+  const localizeProject = (p) => {
+    if (currentLang === 'es') return p;
+    return {
+      ...p, ...(i18n.projectsEn?.[p.id] || {}),
+      category: translateCategory(p.category),
+      role: i18n.rolesEn?.[p.role] || p.role,
+      years: p.years.replace(/Actualidad/g, 'Present').replace(/≈ 2 años de mantenimiento/g, '~2 years of maintenance').replace(/Colaboración puntual/g, 'Limited contribution'),
+    };
+  };
   const $ = (selector, scope = document) => scope.querySelector(selector);
   const $$ = (selector, scope = document) => [...scope.querySelectorAll(selector)];
   const escapeHTML = (value) => String(value ?? '').replace(/[&<>"']/g, (char) => ({'&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;'}[char]));
@@ -12,6 +28,7 @@
   let sort = 'featured';
   let expanded = false;
   let previousFocus = null;
+  let activeModalId = null;
   let toastTimer = null;
   const grid = $('#projectGrid');
   const filterBar = $('#filterBar');
@@ -30,19 +47,20 @@
   const categoryCount = (category) => category === 'Todos' ? projects.length : projects.filter((project) => project.category === category).length;
 
   function createFilters() {
-    filterBar.innerHTML = categories.map((category) => `<button type="button" class="filter-chip ${category === activeFilter ? 'active' : ''}" data-filter="${escapeHTML(category)}" aria-pressed="${category === activeFilter}">${escapeHTML(category)} <small>${categoryCount(category)}</small></button>`).join('');
+    filterBar.innerHTML = categories.map((category) => `<button type="button" class="filter-chip ${category === activeFilter ? 'active' : ''}" data-filter="${escapeHTML(category)}" aria-pressed="${category === activeFilter}">${escapeHTML(translateCategory(category))} <small>${categoryCount(category)}</small></button>`).join('');
   }
 
   function projectCard(p) {
+    p = localizeProject(p);
     const tech = p.stack.slice(0, 3).map((item) => `<span>${escapeHTML(item)}</span>`).join('');
     return `<article class="project-card" data-theme="${escapeHTML(p.theme)}">
-      <div class="project-cover" aria-hidden="true"><span class="cover-label">PROJECT / ${escapeHTML(p.number)}</span><span class="cover-symbol">${escapeHTML(p.number)}</span><span class="cover-arrow">↗</span></div>
+      <div class="project-cover" aria-hidden="true"><span class="cover-label">${strings('PROYECTO','PROJECT')} / ${escapeHTML(p.number)}</span><span class="cover-symbol">${escapeHTML(p.number)}</span><span class="cover-arrow">↗</span></div>
       <div class="project-card-main">
         <span class="project-category">${escapeHTML(p.kicker.toUpperCase())}</span>
         <h3>${escapeHTML(p.title)}</h3>
         <p>${escapeHTML(p.description)}</p>
-        <div class="tech-tags" aria-label="Tecnologías principales">${tech}</div>
-        <div class="card-bottom"><small>${escapeHTML(p.years)}</small><button type="button" data-open-project="${escapeHTML(p.id)}" aria-label="Ver caso técnico de ${escapeHTML(p.title)}">Ver detalle ↗</button></div>
+        <div class="tech-tags" aria-label="${strings('Tecnologías principales', 'Main technologies')}">${tech}</div>
+        <div class="card-bottom"><small>${escapeHTML(p.years)}</small><button type="button" data-open-project="${escapeHTML(p.id)}" aria-label="${strings('Ver caso técnico de', translate('viewCase'))} ${escapeHTML(p.title)}">${translate('detail')}</button></div>
       </div>
     </article>`;
   }
@@ -51,11 +69,12 @@
     let results = projects.filter((p) => {
       if (activeFilter !== 'Todos' && p.category !== activeFilter) return false;
       if (!searchTerm) return true;
-      const searchable = [p.title,p.kicker,p.category,p.role,p.description,p.challenge,p.solution,...p.highlights,...p.stack].join(' ');
+      const english = i18n.projectsEn?.[p.id] || {};
+      const searchable = [p.title,p.kicker,p.category,translateCategory(p.category),p.role,p.description,p.challenge,p.solution,...p.highlights,...p.stack,...Object.values(english).flat()].join(' ');
       return norm(searchable).includes(norm(searchTerm));
     });
-    if (sort === 'az') results = results.slice().sort((a,b) => a.title.localeCompare(b.title,'es'));
-    if (sort === 'za') results = results.slice().sort((a,b) => b.title.localeCompare(a.title,'es'));
+    if (sort === 'az') results = results.slice().sort((a,b) => a.title.localeCompare(b.title,currentLang));
+    if (sort === 'za') results = results.slice().sort((a,b) => b.title.localeCompare(a.title,currentLang));
     return results;
   }
 
@@ -64,7 +83,7 @@
     const filtered = activeFilter !== 'Todos' || searchTerm.length > 0;
     const visible = (!filtered && !expanded) ? all.slice(0, 6) : all;
     grid.innerHTML = visible.map(projectCard).join('');
-    resultCount.textContent = `${all.length} ${all.length === 1 ? 'proyecto' : 'proyectos'}${visible.length < all.length ? ` · mostrando ${visible.length}` : ''}`;
+    resultCount.textContent = `${all.length} ${translate(all.length === 1 ? 'project' : 'projects')}${visible.length < all.length ? ` · ${translate('showing')} ${visible.length}` : ''}`;
     emptyState.hidden = all.length > 0;
     loadMore.hidden = filtered || all.length <= 6 || expanded;
     loadMore.parentElement.hidden = loadMore.hidden;
@@ -102,10 +121,10 @@
   clearFilters.addEventListener('click', reset);
   $('#clearEmpty').addEventListener('click', reset);
 
-  function showModal(id, trigger) {
-    const p = projects.find((item) => item.id === id);
-    if (!p) return;
-    previousFocus = trigger || document.activeElement;
+  function renderModalContent(id) {
+    const original = projects.find((item) => item.id === id);
+    if (!original) return;
+    const p = localizeProject(original);
     const list = p.highlights.map((point) => `<li>${escapeHTML(point)}</li>`).join('');
     const tags = p.stack.map((tech) => `<span>${escapeHTML(tech)}</span>`).join('');
     modalContent.innerHTML = `
@@ -114,11 +133,17 @@
       <div class="modal-meta"><span>${escapeHTML(p.years)}</span><span>${escapeHTML(p.role)}</span><span>${escapeHTML(p.kicker)}</span></div>
       <p class="modal-desc">${escapeHTML(p.description)}</p>
       <hr class="modal-divider">
-      <div class="modal-section"><h3>El desafío</h3><p>${escapeHTML(p.challenge)}</p></div>
-      <div class="modal-section"><h3>Enfoque técnico</h3><p>${escapeHTML(p.solution)}</p></div>
-      <div class="modal-section"><h3>Funcionalidades y aportes</h3><ul>${list}</ul></div>
-      <div class="modal-section"><h3>Stack y herramientas</h3><div class="modal-tech">${tags}</div></div>
-      <p class="modal-note">Caso técnico descriptivo. No se incluyen datos privados, código propietario, capturas inventadas ni enlaces a repositorios de clientes.</p>`;
+      <div class="modal-section"><h3>${translate('challenge')}</h3><p>${escapeHTML(p.challenge)}</p></div>
+      <div class="modal-section"><h3>${translate('approach')}</h3><p>${escapeHTML(p.solution)}</p></div>
+      <div class="modal-section"><h3>${translate('contributions')}</h3><ul>${list}</ul></div>
+      <div class="modal-section"><h3>${translate('stack')}</h3><div class="modal-tech">${tags}</div></div>
+      <p class="modal-note">${translate('note')}</p>`;
+  }
+  function showModal(id, trigger) {
+    if (!projects.some((item) => item.id === id)) return;
+    activeModalId = id;
+    previousFocus = trigger || document.activeElement;
+    renderModalContent(id);
     modal.hidden = false;
     modal.setAttribute('aria-hidden', 'false');
     document.body.classList.add('modal-open');
@@ -132,6 +157,7 @@
     modal.setAttribute('aria-hidden', 'true');
     document.body.classList.remove('modal-open');
     modalContent.innerHTML = '';
+    activeModalId = null;
     if (previousFocus && document.contains(previousFocus)) previousFocus.focus();
     previousFocus = null;
   }
@@ -166,8 +192,8 @@
   function setTheme(theme) {
     const value = theme === 'light' ? 'light' : 'dark';
     document.body.dataset.theme = value;
-    themeToggle.setAttribute('aria-label',value === 'light' ? 'Activar tema oscuro' : 'Activar tema claro');
-    themeToggle.setAttribute('title',value === 'light' ? 'Tema oscuro' : 'Tema claro');
+    themeToggle.setAttribute('aria-label',value === 'light' ? translate('enableDark') : translate('enableLight'));
+    themeToggle.setAttribute('title',value === 'light' ? strings('Tema oscuro','Dark mode') : strings('Tema claro','Light mode'));
     themeToggle.innerHTML = value === 'light'
       ? '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.93 4.93l1.41 1.41m11.32 11.32 1.41 1.41M2 12h2m16 0h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>'
       : '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.1 15.4A8.8 8.8 0 0 1 8.6 3.9 8.9 8.9 0 1 0 20.1 15.4Z"/></svg>';
@@ -181,12 +207,12 @@
   // Navigation and visibility
   const menuToggle = $('#menuToggle');
   const navLinks = $('#navLinks');
-  function closeMenu() {navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label','Abrir menú');}
+  function closeMenu() {navLinks.classList.remove('open');menuToggle.setAttribute('aria-expanded','false');menuToggle.setAttribute('aria-label',translate('openMenu'));}
   menuToggle.addEventListener('click', () => {
     const opening = !navLinks.classList.contains('open');
     navLinks.classList.toggle('open',opening);
     menuToggle.setAttribute('aria-expanded',String(opening));
-    menuToggle.setAttribute('aria-label',opening ? 'Cerrar menú':'Abrir menú');
+    menuToggle.setAttribute('aria-label',opening ? translate('closeMenu') : translate('openMenu'));
   });
   $$('#navLinks a').forEach((link)=>link.addEventListener('click',closeMenu));
   document.addEventListener('click',(event)=>{if(navLinks.classList.contains('open')&&!event.target.closest('.nav')) closeMenu();});
@@ -233,11 +259,62 @@
         temp.value=email;temp.style.position='fixed';temp.style.opacity='0';document.body.appendChild(temp);temp.select();
         const ok = document.execCommand('copy');temp.remove();if(!ok) throw Error('Clipboard disabled');
       }
-      showToast('Correo copiado al portapapeles ✓');
-    } catch (_) {showToast('Escribe a: '+email);}
+      showToast(translate('copied'));
+    } catch (_) {showToast(translate('writeTo')+' '+email);}
   });
 
   $('#currentYear').textContent = String(new Date().getFullYear());
-  createFilters();
-  renderProjects();
+
+  // All static UI copy is translated locally. Original Spanish text remains in the HTML.
+  // Store text nodes/attributes so every switch is reversible and preserves markup and listeners.
+  const textTargets = [];
+  const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+    acceptNode(node) {
+      if (!node.textContent.trim()) return NodeFilter.FILTER_REJECT;
+      if (node.parentElement.closest('script,style,svg')) return NodeFilter.FILTER_REJECT;
+      return NodeFilter.FILTER_ACCEPT;
+    }
+  });
+  while (walker.nextNode()) {
+    const node = walker.currentNode;
+    textTargets.push({node, original: node.textContent});
+  }
+  const attributeTargets = [];
+  document.querySelectorAll('[aria-label],[placeholder],[title],meta[name="description"],meta[property="og:description"]').forEach(el => {
+    for (const attribute of ['aria-label','placeholder','title','content']) {
+      if (el.hasAttribute(attribute)) attributeTargets.push({el,attribute,original:el.getAttribute(attribute)});
+    }
+  });
+  const emailTargets = [...document.querySelectorAll('a[href^="mailto:"]')].map(el => ({el, original:el.getAttribute('href')}));
+  function renderStaticTranslations() {
+    for (const {node, original} of textTargets) {
+      const trimmed = original.trim();
+      const newText = currentLang === 'en' ? (i18n.staticEn?.[trimmed] ?? trimmed) : trimmed;
+      node.textContent = trimmed ? original.replace(trimmed,newText) : original;
+    }
+    for (const {el,attribute,original} of attributeTargets) {
+      el.setAttribute(attribute, currentLang === 'en' ? (i18n.attributesEn?.[original] || original) : original);
+    }
+    for (const {el,original} of emailTargets) {
+      el.setAttribute('href', currentLang === 'en' ? original.replace('Conversemos%20sobre%20una%20oportunidad%20backend','Let%27s%20discuss%20a%20backend%20opportunity').replace('Oportunidad%20de%20desarrollo%20backend','Backend%20development%20opportunity') : original);
+    }
+  }
+  function setLanguage(language) {
+    currentLang = language === 'en' ? 'en' : 'es';
+    document.documentElement.lang = currentLang === 'en' ? 'en' : 'es';
+    document.querySelector('meta[property="og:locale"]')?.setAttribute('content', currentLang === 'en' ? 'en_US' : 'es_EC');
+    renderStaticTranslations();
+    document.querySelector('.lang-switch')?.setAttribute('aria-label', strings('Seleccionar idioma','Select language'));
+    document.querySelectorAll('.lang-option').forEach(btn => btn.setAttribute('aria-pressed',String(btn.dataset.lang === currentLang)));
+    // The theme and language controls are independent, but their accessible labels follow the selected language.
+    themeToggle.setAttribute('aria-label', document.body.dataset.theme === 'light' ? translate('enableDark') : translate('enableLight'));
+    themeToggle.setAttribute('title', document.body.dataset.theme === 'light' ? strings('Tema oscuro','Dark mode') : strings('Tema claro','Light mode'));
+    menuToggle.setAttribute('aria-label', navLinks.classList.contains('open') ? translate('closeMenu') : translate('openMenu'));
+    try { localStorage.setItem('oscar-portfolio-lang',currentLang); } catch (_) { /* storage disabled */ }
+    createFilters();
+    renderProjects();
+    if (activeModalId && !modal.hidden) renderModalContent(activeModalId);
+  }
+  $$('.lang-option').forEach(btn => btn.addEventListener('click', () => setLanguage(btn.dataset.lang)));
+  setLanguage(currentLang);
 })();
